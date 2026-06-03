@@ -21,8 +21,7 @@ E-ink Studio turns the tedious job of hand-writing ESPHome `it.print()` /
 - **1-bit e-ink preview** — see exactly how your layout renders on a
   black/white (or tri-colour red) e-ink panel.
 - **Fonts & colours** — manage GFonts / local fonts and the tri-colour palette.
-- **Value sources & scenarios** — map entities to placeholders and preview
-  different states.
+- **Value sources** — map entities to placeholders and preview their states.
 - **YAML generator** — one click produces the ESPHome lambda + YAML to copy
   into your device config.
 - **Built-in file manager** — browse, upload, download, rename, move and delete
@@ -37,20 +36,36 @@ E-ink Studio turns the tedious job of hand-writing ESPHome `it.print()` /
 
 ## Screenshots
 
-**Editor — dark mode**
-![E-ink Studio editor in dark mode](docs/screenshots/E-ink-Studio-Editor-Screenshot.png)
+**Editor — dark mode** *(the UI follows your Home Assistant theme automatically)*
+
+<p align="center">
+  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot.png" alt="Editor — dark mode" width="100%">
+</p>
 
 **Editor — light mode**
-![E-ink Studio editor in light mode](docs/screenshots/E-ink-Studio-Editor-Screenshot-Lightmode.png)
 
-**Built-in file manager**
-![File manager](docs/screenshots/E-ink-Studio-File-Manager-Screenshot1.png)
+<p align="center">
+  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot-Lightmode.png" alt="Editor — light mode" width="100%">
+</p>
 
-**File manager — text editor**
-![File manager text editor](docs/screenshots/E-ink-Studio-File-Manager-Editor.png)
+**Built-in file manager** — browse, upload, download, rename, move and delete the
+add-on storage from the sidebar
 
-**File manager — font viewer**
-![File manager font viewer](docs/screenshots/E-ink-Studio-File-Manager-Font-Viewer.png)
+<p align="center">
+  <img src="docs/screenshots/E-ink-Studio-File-Manager-Screenshot1.png" alt="File manager" width="100%">
+</p>
+
+**File manager — text editor** *(with undo/redo)*
+
+<p align="center">
+  <img src="docs/screenshots/E-ink-Studio-File-Manager-Editor.png" alt="File manager — text editor" width="100%">
+</p>
+
+**File manager — font viewer** *(preview any TTF/OTF/WOFF before using it)*
+
+<p align="center">
+  <img src="docs/screenshots/E-ink-Studio-File-Manager-Font-Viewer.png" alt="File manager — font viewer" width="100%">
+</p>
 
 ---
 
