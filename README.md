@@ -35,6 +35,25 @@ E-ink Studio turns the tedious job of hand-writing ESPHome `it.print()` /
 
 ---
 
+## Screenshots
+
+**Editor — dark mode**
+![E-ink Studio editor in dark mode](docs/screenshots/E-ink-Studio-Editor-Screenshot.png)
+
+**Editor — light mode**
+![E-ink Studio editor in light mode](docs/screenshots/E-ink-Studio-Editor-Screenshot-Lightmode.png)
+
+**Built-in file manager**
+![File manager](docs/screenshots/E-ink-Studio-File-Manager-Screenshot1.png)
+
+**File manager — text editor**
+![File manager text editor](docs/screenshots/E-ink-Studio-File-Manager-Editor.png)
+
+**File manager — font viewer**
+![File manager font viewer](docs/screenshots/E-ink-Studio-File-Manager-Font-Viewer.png)
+
+---
+
 ## Installation
 
 1. Click the button below to add this repository to your Home Assistant
