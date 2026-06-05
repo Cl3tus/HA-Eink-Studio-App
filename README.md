@@ -112,10 +112,11 @@ copy the generated YAML straight into your device.
   <img src="docs/screenshots/E-ink-Studio-File-Manager-Font-Viewer.png" alt="File manager — font viewer" width="49%">
 </p>
 
-**Inspector — a Value element** (source + format & transform)
+**Inspector — a Value element** (source + format & transform), **Element palette & layers**
 
 <p align="center">
   <img src="docs/screenshots/Inspector-Value.png" alt="Inspector — value element" width="49%">
+  <img src="docs/screenshots/Palette-Layers.png" alt="Element palette and layers" width="49%">
 </p>
 
 **Profile settings — per-block YAML toggles** &nbsp;·&nbsp; **Value sources picker**
@@ -130,12 +131,6 @@ copy the generated YAML straight into your device.
 <p align="center">
   <img src="docs/screenshots/Generate-YAML.png" alt="Generate YAML drawer" width="49%">
   <img src="docs/screenshots/Import-Summary.png" alt="YAML import summary" width="49%">
-</p>
-
-**Element palette & layers**
-
-<p align="center">
-  <img src="docs/screenshots/Palette-Layers.png" alt="Element palette and layers" width="49%">
 </p>
 
 ---
