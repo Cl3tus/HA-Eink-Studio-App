@@ -19,7 +19,7 @@ ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels
 ---
 
 <p align="center">
-  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot.png" alt="E-ink Studio editor" width="100%">
+  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot-Dark-Light.png" alt="E-ink Studio editor — dark & light" width="100%">
 </p>
 
 ## ✨ Why
@@ -109,13 +109,31 @@ copy the generated YAML straight into your device.
   <img src="docs/screenshots/E-ink-Studio-File-Manager-Font-Viewer.png" alt="File manager — font viewer" width="49%">
 </p>
 
-<!-- 📸 SCREENSHOTS WANTED (save in docs/screenshots/, then ping me to embed):
-  1. inspector-value.png      — right inspector showing a Value element (Source + Format & transform)
-  2. profile-yaml-blocks.png  — Profile settings with "Generated YAML Blocks" expanded (the per-pin checkboxes)
-  3. sources-picker.png       — Value sources modal / the Home Assistant entity picker
-  4. generate-yaml.png        — the Generate YAML drawer with the code + base64 recovery line
-  5. import-summary.png       — the YAML import dialog and/or the import summary popup
--->
+**Inspector — a Value element** (source + format & transform)
+
+<p align="center">
+  <img src="docs/screenshots/Inspector-Value.png" alt="Inspector — value element" width="100%">
+</p>
+
+**Profile settings — per-block YAML toggles** &nbsp;·&nbsp; **Value sources picker**
+
+<p align="center">
+  <img src="docs/screenshots/Profile-Yaml-Blocks.png" alt="Generated YAML blocks" width="49%">
+  <img src="docs/screenshots/Sources-Picker.png" alt="Value sources picker" width="49%">
+</p>
+
+**Generate YAML** &nbsp;·&nbsp; **Import summary**
+
+<p align="center">
+  <img src="docs/screenshots/Generate-YAML.png" alt="Generate YAML drawer" width="49%">
+  <img src="docs/screenshots/Import-Summary.png" alt="YAML import summary" width="49%">
+</p>
+
+**Element palette & layers**
+
+<p align="center">
+  <img src="docs/screenshots/Palette-Layers.png" alt="Element palette and layers" width="100%">
+</p>
 
 ---
 
