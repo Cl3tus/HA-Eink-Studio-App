@@ -163,7 +163,7 @@ Projects, fonts and profiles live in the add-on config folder, exposed over SAMB
 └── profiles/   ← profile settings (.json)
 ```
 
-Edit and back them up from your computer, or use the built-in **📁 Files** manager.
+Edit and back them up from your computer, or use the built-in **📁 File manager**.
 
 ## 🔄 Updating
 
