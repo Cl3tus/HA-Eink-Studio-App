@@ -1,15 +1,18 @@
-# E-ink Studio — Home Assistant Add-on
+<p align="center">
+  <img src="eink_studio/banner.png" alt="E-ink Studio" width="100%">
+</p>
 
-<img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/eink_studio/icon.png" width="110" align="right" alt="E-ink Studio">
+# E-ink Studio — Home Assistant Add-on
 
 A **WYSIWYG editor for ESPHome e-paper displays**, running as a Home Assistant
 add-on with its own sidebar panel (Ingress). Drag elements onto a paper-accurate
 canvas, bind them to **live Home Assistant sensor values**, and generate
 ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels.
 
-[![GitHub release](https://img.shields.io/badge/version-3.0.1-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
+[![GitHub release](https://img.shields.io/badge/version-3.0.2-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
 [![Project Stage](https://img.shields.io/badge/project%20stage-experimental-yellow.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ![Supports aarch64](https://img.shields.io/badge/aarch64-yes-green.svg)
 ![Supports amd64](https://img.shields.io/badge/amd64-yes-green.svg)

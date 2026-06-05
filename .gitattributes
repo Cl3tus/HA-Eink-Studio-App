@@ -1,0 +1,22 @@
+# Normalise line endings: store everything text as LF in the repo.
+* text=auto eol=lf
+
+# Windows scripts keep CRLF (none here yet, but just in case).
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Shell scripts must stay LF (run inside the Linux add-on container).
+*.sh text eol=lf
+
+# Binary assets — never touch line endings or try to diff as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
+*.zip binary
