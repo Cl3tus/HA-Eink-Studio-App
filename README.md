@@ -8,7 +8,7 @@ canvas, bind them to **live Home Assistant sensor values**, and generate
 ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels.
 
 [![GitHub release](https://img.shields.io/badge/version-3.0.0-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
-[![Project Stage][project-stage-shield](https://img.shields.io/badge/project%20stage-experimental-yellow.svg)]
+[![Project Stage][project-stage-shield](https://img.shields.io/badge/project%20stage-experimental-yellow.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
 
 ![Supports aarch64](https://img.shields.io/badge/aarch64-yes-green.svg)
