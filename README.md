@@ -1,142 +1,184 @@
 # E-ink Studio — Home Assistant Add-on
 
-A **WYSIWYG editor for ESPHome e-ink displays**, running as a Home Assistant
-add-on with its own sidebar panel (via Ingress). Design your display layout by
-dragging elements onto a paper-accurate canvas, bind them to live Home Assistant
-sensor values, and generate ready-to-paste ESPHome `display:` lambda + YAML.
+<img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/eink_studio/icon.png" width="110" align="right" alt="E-ink Studio">
+
+A **WYSIWYG editor for ESPHome e-paper displays**, running as a Home Assistant
+add-on with its own sidebar panel (Ingress). Drag elements onto a paper-accurate
+canvas, bind them to **live Home Assistant sensor values**, and generate
+ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels.
+
+[![GitHub release](https://img.shields.io/github/v/release/Cl3tus/HA-Eink-Studio-App?label=version&color=ff9800)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
+[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
+![Supports aarch64](https://img.shields.io/badge/aarch64-yes-green.svg)
+![Supports amd64](https://img.shields.io/badge/amd64-yes-green.svg)
+![Supports armv7](https://img.shields.io/badge/armv7-yes-green.svg)
+![Supports armhf](https://img.shields.io/badge/armhf-yes-green.svg)
+![Supports i386](https://img.shields.io/badge/i386-yes-green.svg)
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FCl3tus%2FHA-Eink-Studio-App)
 
 ---
 
-## What it does
+<p align="center">
+  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot.png" alt="E-ink Studio editor" width="100%">
+</p>
 
-E-ink Studio turns the tedious job of hand-writing ESPHome `it.print()` /
-`it.image()` lambdas into a visual design task:
+## ✨ Why
 
-- **Drag-and-drop canvas** — text, values, MDI icons, lines, rectangles,
-  circles, Wi-Fi icons, refresh clocks, graphs and combined icon+value widgets.
-- **Live Home Assistant data** — read-only preview of your real sensor states
-  while designing (via the Supervisor API; nothing is written back to HA).
-- **1-bit e-ink preview** — see exactly how your layout renders on a
-  black/white (or tri-colour red) e-ink panel.
-- **Fonts & colours** — manage GFonts / local fonts and the tri-colour palette.
-- **Value sources** — map entities to placeholders and preview their states.
-- **YAML generator** — one click produces the ESPHome lambda + YAML to copy
-  into your device config.
-- **Built-in file manager** — browse, upload, download, rename, move and delete
-  files and folders in the add-on storage, right from the sidebar.
-- **Profiles** — keep multiple display designs side by side.
-- **Light / dark theme** and **English / Dutch** — automatically following Home
-  Assistant, or fixed via the add-on options.
-- **Fully offline** — all libraries (Konva, js-yaml, MDI, fonts) are bundled; no
-  internet connection required.
+Hand-writing ESPHome `it.print()` / `it.printf()` lambdas for an e-paper display
+is tedious: you count pixels, guess alignment, juggle fonts and glyph lists, and
+re-flash to see the result. E-ink Studio turns that into a **visual design task** —
+you see exactly what the panel will show, bind values to your real entities, and
+copy the generated YAML straight into your device.
+
+## 🎨 Features
+
+**Design**
+- Drag-and-drop canvas with a **paper-accurate** preview of your panel.
+- Elements: **Text**, **Value** (sensor + format/transform), **MDI icon**, **line**,
+  **rectangle**, **circle / oval**, **triangle**, **polygon**, **ring**, **gauge**,
+  **QR code**, **graph**, **refresh clock**, **Wi-Fi signal icon**.
+- **Rotate, resize, fill** shapes with on-canvas handles; **align** the whole
+  selection (left/center/right/top/middle/bottom).
+- **Grid + snap** (8 / 10 / 16 / 20 / 25 / 40 px), snapping the visible pixels to
+  the grid lines; hold **Shift** to move freely.
+- **Multi-select** (rubber-band, Ctrl/Shift-click, layer checkboxes), **layers**
+  panel with drag-to-reorder, visibility toggle, rename and delete.
+- **Undo/redo**, **duplicate**, and **cut / copy / paste** (Ctrl+X / C / V) — paste
+  even works **between the main and waiting screen**.
+- **Two screens** per design: the **main** screen and a **waiting-for-data** screen.
+- **Conditions (if/else)** on any element — show/hide or recolour per branch.
+
+**Data & values**
+- Pick real **Home Assistant entities** from a searchable list and bind them to
+  value elements.
+- **Live preview** of the actual sensor states while you design (read-only), with a
+  refresh button and an auto-refresh interval (off / 1–30 min / custom).
+- **Transforms**: round/scale numbers, on/off → custom labels, time → `HH:MM`,
+  dates in many formats, weekday/month **names** (NL & EN), and a **custom
+  date/time format** with tokens like `{wd} {dd} {mon}` → `Sun 19 Jun`.
+- **Prefix/suffix** with an automatic space before units (`1065` → `1065 L/h`).
+
+**Fonts & colours**
+- Manage **Google Fonts** and **local TTF/OTF** (upload + dedupe + live preview).
+- **Material Design Icons** (v7.4.47) bundled and seeded into your `fonts/` folder.
+- Colours follow the display's colour type automatically (mono / B-W-R / 7-colour).
+
+**YAML output**
+- One click produces the ESPHome **lambda + matching blocks**.
+- **Per-block toggles** (Profile settings → *Generated YAML Blocks*): refresh logic
+  (`esphome` on_boot + `script` + `time`), `globals`, `font`, `color`, `sensor`,
+  `text_sensor`, the `spi` bus, and the **display pins** (each pin individually).
+- A compact **base64 recovery comment** lets you paste the YAML back later to
+  restore the whole editable design.
+
+**Import**
+- Paste a complete ESPHome config — only `font:`, `color:` and `homeassistant`
+  `sensor:`/`text_sensor:` are read, the rest is ignored.
+- The studio also **reverse-engineers the `display:` lambda** back into editable
+  elements (best-effort) and shows a summary of what was/wasn't imported.
+
+**Files & the rest**
+- Built-in **file manager**: collapsible tree, multi-select, text editor
+  (undo/redo), font preview, upload/download/rename/move/delete — also reachable
+  over **SAMBA**.
+- **Profiles** to keep multiple designs side by side, with **duplicate** and a
+  **model picker** that pre-fills width/height for known panels.
+- **Light / dark** theme and **English / Dutch** — automatically following Home
+  Assistant, or fixed in the add-on options.
+- **Fully offline** — Konva, js-yaml, MDI and all fonts are bundled.
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
-**Editor — dark mode** *(the UI follows your Home Assistant theme automatically)*
-
-<p align="center">
-  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot.png" alt="Editor — dark mode" width="100%">
-</p>
-
-**Editor — light mode**
+**Editor — dark & light**
 
 <p align="center">
-  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot-Lightmode.png" alt="Editor — light mode" width="100%">
+  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot.png" alt="Editor — dark mode" width="49%">
+  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot-Lightmode.png" alt="Editor — light mode" width="49%">
 </p>
 
-**Built-in file manager** — browse, upload, download, rename, move and delete the
-add-on storage from the sidebar
+**Built-in file manager**
 
 <p align="center">
   <img src="docs/screenshots/E-ink-Studio-File-Manager-Screenshot1.png" alt="File manager" width="100%">
 </p>
 
-**File manager — text editor** *(with undo/redo)*
-
 <p align="center">
-  <img src="docs/screenshots/E-ink-Studio-File-Manager-Editor.png" alt="File manager — text editor" width="100%">
+  <img src="docs/screenshots/E-ink-Studio-File-Manager-Editor.png" alt="File manager — text editor" width="49%">
+  <img src="docs/screenshots/E-ink-Studio-File-Manager-Font-Viewer.png" alt="File manager — font viewer" width="49%">
 </p>
 
-**File manager — font viewer** *(preview any TTF/OTF/WOFF before using it)*
-
-<p align="center">
-  <img src="docs/screenshots/E-ink-Studio-File-Manager-Font-Viewer.png" alt="File manager — font viewer" width="100%">
-</p>
+<!-- 📸 SCREENSHOTS WANTED (save in docs/screenshots/, then ping me to embed):
+  1. inspector-value.png      — right inspector showing a Value element (Source + Format & transform)
+  2. profile-yaml-blocks.png  — Profile settings with "Generated YAML Blocks" expanded (the per-pin checkboxes)
+  3. sources-picker.png       — Value sources modal / the Home Assistant entity picker
+  4. generate-yaml.png        — the Generate YAML drawer with the code + base64 recovery line
+  5. import-summary.png       — the YAML import dialog and/or the import summary popup
+-->
 
 ---
 
-## Installation
+## 🚀 Installation
 
-1. Click the button below to add this repository to your Home Assistant
-   add-on store:
+1. Add this repository to your Home Assistant add-on store:
 
    [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FCl3tus%2FHA-Eink-Studio-App)
 
-   *(Or manually: **Settings → Add-ons → Add-on Store → ⋮ → Repositories**,
-   then paste `https://github.com/Cl3tus/HA-Eink-Studio-App` and click **Add**.)*
+   *(Or manually: **Settings → Add-ons → Add-on Store → ⋮ → Repositories**, paste
+   `https://github.com/Cl3tus/HA-Eink-Studio-App` and click **Add**.)*
 
-2. Refresh the store; **E-ink Studio** appears at the bottom. Open it and click
-   **Install** (the first build takes a few minutes while the image is built on
-   your Home Assistant host).
+2. Refresh the store, open **E-ink Studio**, click **Install** (the first build
+   takes a few minutes), then **Start**.
 
-3. Click **Start**, then open **E-ink Studio** from the sidebar.
+3. Open **E-ink Studio** from the sidebar.
 
----
+## ⚡ Quick start
 
-## Configuration
+1. Click **○ Live** to pull your real Home Assistant entities.
+2. In **Bronnen / Sources → From Home Assistant**, add the sensors you want to show.
+3. Drag a **Value** onto the canvas and bind it to a source (set format/transform).
+4. Click **&lt;/&gt; Generate YAML**, then **Copy** or **Download** and paste it into
+   your ESPHome device config.
+5. Put your local TTF fonts in your ESPHome `fonts/` folder.
 
-The add-on has two options under its **Configuration** tab:
+## ⚙️ Configuration
 
 | Option | Values | Description |
 |--------|--------|-------------|
-| `language` | `auto` · `nl` · `en` | UI language. `auto` follows your Home Assistant / browser language. |
-| `theme` | `auto` · `light` · `dark` | Colour theme. `auto` follows Home Assistant's light/dark setting. |
+| `language` | `auto` · `nl` · `en` | UI language. `auto` follows Home Assistant / browser. |
+| `theme` | `auto` · `light` · `dark` | Colour theme. `auto` follows Home Assistant. |
 
-Both can also be toggled on the fly from inside the editor; the add-on option is
-the default.
+Both can also be toggled on the fly inside the editor; the add-on option is the
+default.
 
----
+## 🗄️ Storage & SAMBA
 
-## Storage & SAMBA access
-
-Projects, fonts and profiles are stored in the add-on config folder, which is
-exposed over SAMBA at:
+Projects, fonts and profiles live in the add-on config folder, exposed over SAMBA at:
 
 ```
 \\<HA-IP>\addon_configs\<slug>_eink_studio\
 ├── projects/   ← saved designs (.json)
-├── fonts/      ← uploaded fonts
+├── fonts/      ← uploaded fonts (incl. the bundled MDI ttf)
 └── profiles/   ← profile settings (.json)
 ```
 
-This lets you edit and back up your files directly from your computer. Inside
-the editor, the built-in file manager (📁 **Files**) provides the same access.
+Edit and back them up from your computer, or use the built-in **📁 Files** manager.
 
----
+## 🔄 Updating
 
-## Updating
+Update notifications appear automatically in Home Assistant. Open the add-on and
+click **Update**; the changelog is shown in the add-on UI.
 
-Bump notifications appear automatically in Home Assistant when a new version is
-published. Open the add-on and click **Update**; the changelog is shown in the
-add-on UI.
+## ⚠️ What it does *not* do
 
----
+- It does **not** write to your ESPHome config or your fonts folder, and never
+  writes to your HA states — the live data is preview-only by design. You copy the
+  generated YAML into your device config yourself.
 
-## What it does *not* do
+## 📝 License & credits
 
-- ❌ It does **not** write to your ESPHome configuration or fonts folder — the
-  ESPHome live data is preview-only by design. You copy the generated YAML into
-  your device config yourself.
-
----
-
-## License & credits
-
-UI/labels available in English and Dutch. Built with
-[Konva](https://konvajs.org/), [js-yaml](https://github.com/nodeca/js-yaml) and
-[Material Design Icons](https://pictogrammers.com/library/mdi/), all bundled
-locally for fully offline use.
+Built with [Konva](https://konvajs.org/), [js-yaml](https://github.com/nodeca/js-yaml)
+and [Material Design Icons](https://pictogrammers.com/library/mdi/), all bundled
+locally for fully offline use. UI available in English and Dutch.
