@@ -7,7 +7,7 @@ add-on with its own sidebar panel (Ingress). Drag elements onto a paper-accurate
 canvas, bind them to **live Home Assistant sensor values**, and generate
 ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels.
 
-[![GitHub release](https://img.shields.io/badge/version-3.0.0-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
+[![GitHub release](https://img.shields.io/badge/version-3.0.1-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
 [![Project Stage](https://img.shields.io/badge/project%20stage-experimental-yellow.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
 
@@ -199,3 +199,9 @@ click **Update**; the changelog is shown in the add-on UI.
 Built with [Konva](https://konvajs.org/), [js-yaml](https://github.com/nodeca/js-yaml)
 and [Material Design Icons](https://pictogrammers.com/library/mdi/), all bundled
 locally for fully offline use. UI available in English and Dutch.
+
+---
+
+<p align="center">
+  Proudly vibecoded by <b>Cletus</b> &amp; <a href="https://claude.com/claude-code">Claude Code</a> 🤖✨
+</p>
