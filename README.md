@@ -115,7 +115,7 @@ copy the generated YAML straight into your device.
 **Inspector — a Value element** (source + format & transform)
 
 <p align="center">
-  <img src="docs/screenshots/Inspector-Value.png" alt="Inspector — value element" width="100%">
+  <img src="docs/screenshots/Inspector-Value.png" alt="Inspector — value element" width="49%">
 </p>
 
 **Profile settings — per-block YAML toggles** &nbsp;·&nbsp; **Value sources picker**
@@ -135,7 +135,7 @@ copy the generated YAML straight into your device.
 **Element palette & layers**
 
 <p align="center">
-  <img src="docs/screenshots/Palette-Layers.png" alt="Element palette and layers" width="100%">
+  <img src="docs/screenshots/Palette-Layers.png" alt="Element palette and layers" width="49%">
 </p>
 
 ---
