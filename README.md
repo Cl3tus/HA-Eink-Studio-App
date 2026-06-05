@@ -194,7 +194,15 @@ click **Update**; the changelog is shown in the add-on UI.
   writes to your HA states — the live data is preview-only by design. You copy the
   generated YAML into your device config yourself.
 
+## 🤝 Contributing
+
+Bug reports and ideas are welcome — open an
+[issue](https://github.com/Cl3tus/HA-Eink-Studio-App/issues/new/choose) or read the
+[contributing guide](CONTRIBUTING.md).
+
 ## 📝 License & credits
+
+Released under the [MIT License](LICENSE).
 
 Built with [Konva](https://konvajs.org/), [js-yaml](https://github.com/nodeca/js-yaml)
 and [Material Design Icons](https://pictogrammers.com/library/mdi/), all bundled
