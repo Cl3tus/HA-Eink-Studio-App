@@ -9,7 +9,7 @@ add-on with its own sidebar panel (Ingress). Drag elements onto a paper-accurate
 canvas, bind them to **live Home Assistant sensor values**, and generate
 ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels.
 
-[![GitHub release](https://img.shields.io/badge/version-3.7.1-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
+[![GitHub release](https://img.shields.io/badge/version-3.7.2-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
 [![Project Stage](https://img.shields.io/badge/project%20stage-experimental-yellow.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -36,14 +36,18 @@ copy the generated YAML straight into your device.
 ## 🎨 Features
 
 **Design**
-- Drag-and-drop canvas with a **paper-accurate** preview of your panel.
+- Drag-and-drop canvas with a **paper-accurate**, **pixel-accurate** preview — text
+  and icons sit on the real font baseline, exactly like ESPHome's `TextAlign`.
 - Elements: **Text**, **Value** (sensor + format/transform), **MDI icon**, **line**,
   **rectangle**, **circle / oval**, **triangle**, **polygon**, **ring**, **gauge**,
-  **QR code**, **graph**, **refresh clock**, **Wi-Fi signal icon**.
+  **QR code**, **graph** (with legend), **refresh clock**, **Wi-Fi signal icon**.
 - **Rotate, resize, fill** shapes with on-canvas handles; **align** the whole
-  selection (left/center/right/top/middle/bottom).
-- **Grid + snap** (8 / 10 / 16 / 20 / 25 / 40 px), snapping the visible pixels to
-  the grid lines; hold **Shift** to move freely.
+  selection (left/center/right/top/middle/bottom) and reorder with **layer-order**
+  buttons (front / back / forward / backward).
+- **Grid + snap** (8 / 10 / 16 / 20 / 25 / 40 px), plus **Figma-style rulers & guide
+  lines** with **pixel-perfect snapping** to the visible ink — snap into the cross of
+  a vertical and a horizontal guide at once. Hold **Shift** to move freely.
+- Sticky **status bar** with editable zoom (up to 500 %), grid, ruler and snap toggles.
 - **Multi-select** (rubber-band, Ctrl/Shift-click, layer checkboxes), **layers**
   panel with drag-to-reorder, visibility toggle, rename and delete.
 - **Undo/redo**, **duplicate**, and **cut / copy / paste** (Ctrl+X / C / V) — paste
