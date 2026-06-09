@@ -9,7 +9,7 @@ add-on with its own sidebar panel (Ingress). Drag elements onto a paper-accurate
 canvas, bind them to **live Home Assistant sensor values**, and generate
 ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels.
 
-[![GitHub release](https://img.shields.io/badge/version-3.7.4-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
+[![GitHub release](https://img.shields.io/badge/version-3.7.5-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
 [![Project Stage](https://img.shields.io/badge/project%20stage-experimental-yellow.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/releases)
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -68,6 +68,8 @@ copy the generated YAML straight into your device.
 **Fonts & colours**
 - Manage **Google Fonts** and **local TTF/OTF** (upload + dedupe + live preview).
 - **Material Design Icons** (v7.4.47) bundled and seeded into your `fonts/` folder.
+- **Download Fonts (.zip)** — grab your whole `fonts/` folder as one archive and
+  unpack it into ESPHome's `config/fonts/` (the add-on never writes there itself).
 - Colours follow the display's colour type automatically (mono / B-W-R / 7-colour).
 
 **YAML output**

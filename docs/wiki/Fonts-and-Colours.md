@@ -26,6 +26,18 @@ Click a loaded font id in the list for an **inline preview**. In the edit dialog
 preview updates **live** as you change the **size** (including the ▲/▼ steppers) and,
 for Google Fonts, the **weight**.
 
+### Download fonts (.zip)
+
+The **Download Fonts (.zip)** button — bottom-left of the Fonts dialog, next to
+*Cancel* / *Save* — bundles every file in the add-on's `fonts/` folder into a single
+`eink-fonts.zip`. Unpack it into your ESPHome `config/fonts/` folder so the build finds
+the exact files your design references.
+
+E-ink Studio never writes into the ESPHome config itself: ESPHome only loads fonts that
+live next to its own YAML, and reaching into another add-on's config would require a
+broad read/write mount — a security risk we deliberately avoid. The zip keeps copying
+the fonts a quick but **manual** step on your side.
+
 ### Glyphs (what ends up in the YAML)
 
 - **Text fonts** get the printable-ASCII set (so typed text never renders as "tofu"),
@@ -72,6 +84,18 @@ Dezelfde TTF-bestandsnaam wordt maar één keer geüpload (ontdubbeld).
 Klik een geladen font-id in de lijst voor een **inline preview**. In het bewerk-venster
 ververst de preview **live** terwijl je de **grootte** aanpast (ook met de ▲/▼-knopjes)
 en, bij Google Fonts, de **weight**.
+
+### Fonts downloaden (.zip)
+
+De knop **Download Fonts (.zip)** — linksonder in het Fonts-venster, naast *Annuleren* /
+*Opslaan* — bundelt elk bestand uit de `fonts/`-map van de add-on in één
+`eink-fonts.zip`. Pak die uit in je ESPHome `config/fonts/`-map, zodat de build precies
+de bestanden vindt waar je ontwerp naar verwijst.
+
+E-ink Studio schrijft zelf nooit in de ESPHome-config: ESPHome laadt alleen fonts die
+naast zijn eigen YAML staan, en in de config van een andere add-on schrijven zou een
+brede lees/schrijf-mount vereisen — een security-risico dat we bewust vermijden. De zip
+houdt het kopiëren een snelle maar **handmatige** stap aan jouw kant.
 
 ### Glyphs (wat in de YAML komt)
 
