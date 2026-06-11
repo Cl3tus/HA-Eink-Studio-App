@@ -14,8 +14,8 @@ ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-![Supports aarch64](https://img.shields.io/badge/aarch64-yes-green.svg)
-![Supports amd64](https://img.shields.io/badge/amd64-yes-green.svg)
+<img src="https://img.shields.io/badge/aarch64-yes-green.svg" alt="Supports aarch64">
+<img src="https://img.shields.io/badge/amd64-yes-green.svg" alt="Supports amd64">
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FCl3tus%2FHA-Eink-Studio-App)
 
