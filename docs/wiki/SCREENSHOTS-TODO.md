@@ -11,9 +11,9 @@ once the PNGs land they appear automatically (no path edits).
 | File | Used in |
 |------|---------|
 | `E-ink-Studio-Editor-Screenshot-Dark-Light.png` | README, DOCS, Wiki Home |
-| `E-ink-Studio-Editor-Screenshot.png` | README (dark) |
+| `E-ink-Studio-Editor-Screenshot-Darkmode.png` | README (dark) |
 | `E-ink-Studio-Editor-Screenshot-Lightmode.png` | README (light) |
-| `E-ink-Studio-File-Manager-Screenshot1.png` | README, DOCS |
+| `E-ink-Studio-File-Manager-Screenshot.png` | README, DOCS |
 | `E-ink-Studio-File-Manager-Editor.png` | README, Wiki File Manager |
 | `E-ink-Studio-File-Manager-Font-Viewer.png` | README, Wiki File Manager |
 | `Inspector-Value.png` | README, DOCS, Wiki Values |
