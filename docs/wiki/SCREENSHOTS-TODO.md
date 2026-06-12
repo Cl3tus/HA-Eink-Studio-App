@@ -27,7 +27,7 @@ once the PNGs land they appear automatically (no path edits).
 
 | # | Filename | Used in (Wiki page) | What to show |
 |---|----------|---------------------|--------------|
-| 1 | `Quick-Start-Empty.png` | Quick Start | The editor right after opening: **empty canvas**, palette on the left, inspector empty. A clean "first run" look. |
+| 1 | `Quick-Start-Empty-Darkmode & Quick-Start-Empty-Lightmode` | Quick Start | The editor right after opening: **empty canvas**, palette on the left, inspector empty. A clean "first run" look. |
 | 2 | `Interface-Overview.png` | Interface Tour | The **full editor** with a finished design. Ideally annotate (arrows/labels) the **top bar, left panel, canvas toolbar, status bar, inspector**. A plain full-window shot is fine too. |
 | 3 | `Elements-Overview.png` | Elements | The canvas with **one of each element** placed (text, value, icon, line, rect, circle, triangle, polygon, ring, gauge, QR, graph, clock, wifi) so the variety is visible. |
 | 4 | `Rulers-Guides.png` | Rulers, Guides & Snapping | **Rulers ON**, at least **one vertical + one horizontal guide** crossing, and an element snapped **into the cross**. Capture the moment the blue guide lines and ruler markers are clearly visible. |
