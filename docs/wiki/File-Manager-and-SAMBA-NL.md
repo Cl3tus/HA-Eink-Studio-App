@@ -1,40 +1,6 @@
-# File Manager & SAMBA
+# Bestandsbeheer & SAMBA
 
-## 🇬🇧 English
-
-Open **📁 Files** (top bar) — or browse to `files.html`.
-
-> 📷 *Screenshot: the file manager with the tree and a file selected.* →
-> `docs/screenshots/File-Manager.png` *(see also the existing File-Manager screenshots)*
-
-### What you can do
-
-- **Tree** view, **fully expanded by default** (collapse a folder to hide its files).
-- **Multi-select** with row checkboxes; **upload**, **download**, **rename**, **move**,
-  **delete**.
-- Built-in **text editor** with undo/redo (double-click a text file).
-- **Font preview** — double-click a `.ttf` to preview the glyphs.
-- Drag files onto the window to upload.
-
-> 📷 *Screenshots already in the repo: `E-ink-Studio-File-Manager-Editor.png`,
-> `E-ink-Studio-File-Manager-Font-Viewer.png`.*
-
-### Storage layout (SAMBA)
-
-The same storage is reachable over **SAMBA** at
-`\\<HA-IP>\addon_configs\<slug>_eink_studio\`:
-
-```
-projects/   ← saved designs (.json)
-fonts/      ← uploaded fonts (incl. the bundled MDI ttf)
-profiles/   ← profile settings (.json)
-```
-
-Edit and back them up from your computer, or use the built-in file manager.
-
----
-
-## 🇳🇱 Nederlands
+*🇬🇧 [English](File-Manager-and-SAMBA-EN) · 🏠 [Home](Home-NL)*
 
 Open **📁 Bestanden** (bovenbalk) — of ga naar `files.html`.
 
@@ -50,6 +16,8 @@ Open **📁 Bestanden** (bovenbalk) — of ga naar `files.html`.
 - Ingebouwde **teksteditor** met ongedaan maken/opnieuw (dubbelklik een tekstbestand).
 - **Font-preview** — dubbelklik een `.ttf` om de glyphs te bekijken.
 - Sleep bestanden op het venster om te uploaden.
+- In-app **bevestigingsvensters** (wijzigingen verwerpen, bestanden verwijderen) passen
+  bij de editor — geen native browser-pop-ups.
 
 > 📷 *Screenshots staan al in de repo: `E-ink-Studio-File-Manager-Editor.png`,
 > `E-ink-Studio-File-Manager-Font-Viewer.png`.*

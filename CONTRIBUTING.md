@@ -1,6 +1,6 @@
 # Contributing to E-ink Studio
 
-Thanks for your interest! This is a Home Assistant add-on — a WYSIWYG editor for
+Thanks for your interest! This is a Home Assistant add-on — a visual editor for
 ESPHome e-paper displays. Contributions, bug reports and ideas are welcome.
 
 ## Reporting bugs / requesting features

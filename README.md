@@ -4,12 +4,12 @@
 
 # E-ink Studio — Home Assistant Add-on
 
-A **WYSIWYG editor for ESPHome e-paper displays**, running as a Home Assistant
+A **visual editor for ESPHome e-paper displays**, running as a Home Assistant
 add-on with its own sidebar panel (Ingress). Drag elements onto a paper-accurate
 canvas, bind them to **live Home Assistant sensor values**, and generate
 ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels.
 
-[![GitHub release](https://img.shields.io/badge/version-3.9.21-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App)
+[![GitHub release](https://img.shields.io/badge/version-3.9.22-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App)
 [![Project Stage](https://img.shields.io/badge/project%20stage-experimental-yellow.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App)
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -52,12 +52,17 @@ copy the generated YAML straight into your device.
   panel with drag-to-reorder, visibility toggle, rename and delete.
 - **Undo/redo**, **duplicate**, and **cut / copy / paste** (Ctrl+X / C / V) — paste
   even works **between the main and waiting screen**.
-- **Two screens** per design: the **main** screen and a **waiting-for-data** screen.
+- **Multiple screens** (up to 10) per design, **switchable from Home Assistant** via a
+  generated `select`, per-screen `button`s and an optional rotation `switch` — plus a
+  separate **waiting-for-data** screen.
+- **Negative mode** (per profile): a black screen with white content (`it.fill` + swapped
+  base colours).
 - **Conditions (if/else)** on any element — show/hide or recolour per branch.
 
 **Data & values**
 - Pick real **Home Assistant entities** from a searchable list and bind them to
-  value elements.
+  value elements, with **type detection** (number / bool / time / string) that flags a
+  mismatch between your lambda type and what HA reports — one click to snap it.
 - **Live preview** of the actual sensor states while you design (read-only), with a
   refresh button and an auto-refresh interval (off / 1–30 min / custom).
 - **Transforms**: round/scale numbers, on/off → custom labels, time → `HH:MM`,
@@ -66,7 +71,9 @@ copy the generated YAML straight into your device.
 - **Prefix/suffix** with an automatic space before units (`1065` → `1065 L/h`).
 
 **Fonts & colours**
-- Manage **Google Fonts** and **local TTF/OTF** (upload + dedupe + live preview).
+- Manage **Google Fonts** and **local TTF/OTF** (upload + dedupe + live preview), with a
+  named **weight** dropdown (Thin 100 … Black 900) and an **Italic** toggle — bundled
+  variable fonts so every weight previews distinctly.
 - **Material Design Icons** (v7.4.47) bundled and seeded into your `fonts/` folder.
 - **Download Fonts (.zip)** — grab your whole `fonts/` folder as one archive and
   unpack it into ESPHome's `config/fonts/` (the add-on never writes there itself).
@@ -75,7 +82,8 @@ copy the generated YAML straight into your device.
 **YAML output**
 - One click produces the ESPHome **lambda + matching blocks**.
 - **Per-block toggles** (Profile settings → *Generated YAML Blocks*): refresh logic
-  (`esphome` on_boot + `script` + `time`), `globals`, `font`, `color`, `sensor`,
+  (`esphome` on_boot + `script` + `time`), the **HA screen control** (dropdown / buttons
+  / both / none) and **screen rotation switch**, `globals`, `font`, `color`, `sensor`,
   `text_sensor`, the `spi` bus, and the **display pins** (each pin individually).
 - A compact **base64 recovery comment** lets you paste the YAML back later to
   restore the whole editable design.

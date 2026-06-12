@@ -3,6 +3,19 @@
 These Markdown files are the **source** for the project's GitHub Wiki. They're kept
 here in the main repo (versioned alongside the code), then published to the GitHub Wiki.
 
+## Language structure
+
+The wiki is **split per language**. `Home.md` is a small **language picker** (English /
+Nederlands); from there each topic exists as two single-language pages with a `-EN` or
+`-NL` suffix. Every page has a one-click language switch at the top, and `_Sidebar.md`
+lists both languages in separate sections.
+
+- `Home.md` — language picker (links to `Home-EN` / `Home-NL`).
+- `Home-EN.md` / `Home-NL.md` — the per-language landing/index pages.
+- `_Sidebar.md` — navigation, grouped **English** and **Nederlands**.
+- Each topic: `<Topic>-EN.md` + `<Topic>-NL.md`. Inter-page links always carry the same
+  suffix (an EN page links to other `-EN` pages, an NL page to `-NL`).
+
 ## How to publish to the GitHub Wiki
 
 The GitHub Wiki is a **separate git repository** (`…/HA-Eink-Studio-App.wiki.git`). To
@@ -26,15 +39,15 @@ GitHub Wiki naming rules:
 - `Home.md` is the landing page.
 - `_Sidebar.md` is the navigation sidebar (already included).
 - Page filenames map to URLs by replacing spaces with `-`. These files already use the
-  hyphenated names the inter-page links expect (e.g. `Rulers-Guides-Snapping.md`).
+  hyphenated, language-suffixed names the inter-page links expect (e.g. `Screens-EN.md`).
 
 ## Pages
 
-`Home`, `Installation`, `Quick-Start`, `Interface-Tour`, `Elements`,
-`Values-Format-Transforms`, `Rulers-Guides-Snapping`, `Fonts-and-Colours`,
-`Graphs-and-Legend`, `Two-Screens`, `Profiles-and-YAML-Blocks`,
+Per language (`-EN` / `-NL`): `Installation`, `Quick-Start`, `Interface-Tour`,
+`Elements`, `Values-Format-Transforms`, `Sources-and-Types`, `Rulers-Guides-Snapping`,
+`Fonts-and-Colours`, `Graphs-and-Legend`, `Screens`, `Profiles-and-YAML-Blocks`,
 `Generate-and-Import-YAML`, `File-Manager-and-SAMBA`, `Keyboard-Shortcuts`,
-`Troubleshooting-and-FAQ`, plus `_Sidebar`.
+`Troubleshooting-and-FAQ`. Plus `Home`, `Home-EN`, `Home-NL` and `_Sidebar`.
 
 ## Screenshots
 

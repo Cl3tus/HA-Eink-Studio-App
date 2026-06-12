@@ -5,7 +5,7 @@ before editing so a fresh session doesn't relearn the hard way.
 
 ## What this is
 
-**E-ink Studio** — a Home Assistant add-on: a WYSIWYG editor for ESPHome e-paper
+**E-ink Studio** — a Home Assistant add-on: a visual editor for ESPHome e-paper
 displays. You drag elements onto a paper-accurate canvas, bind them to live HA
 sensor values, and generate ready-to-paste ESPHome `display:` lambda + YAML.
 It is **preview-only**: it never writes to the device config or HA states.
