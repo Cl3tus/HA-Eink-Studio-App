@@ -11,11 +11,11 @@ once the PNGs land they appear automatically (no path edits).
 | File | Used in |
 |------|---------|
 | `E-ink-Studio-Editor-Screenshot-Dark-Light.png` | README, DOCS, Wiki Home |
-| `E-ink-Studio-Editor-Screenshot-Darkmode.png` | README (dark) |
-| `E-ink-Studio-Editor-Screenshot-Lightmode.png` | README (light) |
-| `E-ink-Studio-File-Manager-Screenshot.png` | README, DOCS |
-| `E-ink-Studio-File-Manager-Editor.png` | README, Wiki File Manager |
-| `E-ink-Studio-File-Manager-Font-Viewer.png` | README, Wiki File Manager |
+| `Screenshot-Darkmode.png` | README (dark) |
+| `Screenshot-Lightmode.png` | README (light) |
+| `File-Manager.png` | README, DOCS |
+| `File-Manager-Editor.png` | README, Wiki File Manager |
+| `File-Manager-Font-Viewer.png` | README, Wiki File Manager |
 | `Inspector-Value.png` | README, DOCS, Wiki Values |
 | `Palette-Layers.png` | README, DOCS |
 | `Profile-Yaml-Blocks.png` | README, DOCS, Wiki Profiles |
@@ -34,7 +34,7 @@ once the PNGs land they appear automatically (no path edits).
 | 5 | `Fonts-Dialog.png` | Fonts & Colours | The **Fonts** dialog open: the font list (incl. an MDI font) **and** the "Add font" form, with the **weight dropdown / Italic checkbox** and an **inline preview** showing. |
 | 6 | `Graph-Legend.png` | Graphs & Legend | A **Graph** element selected with the inspector showing **traces + legend** settings; the legend visible on the canvas with a **custom trace label**. |
 | 7 | `Screens.png` | Screens | The **screen selector** above the canvas with **Use multiple screens** on — show the **add / duplicate / rename / delete** buttons and the **↻ rotation** read-out. (Replaces the old `Two-Screens.png`.) |
-| 8 | existing suffices | File Manager & SAMBA | The file manager with the **tree expanded** and a file selected (toolbar buttons enabled). *(Optional — the existing File-Manager shots may suffice.)* |
+| 8 | `File-Manager.png` (existing one) | File Manager & SAMBA | The file manager with the **tree expanded** and a file selected (toolbar buttons enabled). *(Optional — the existing File-Manager shots may suffice.)* |
 
 ### 💡 Nice-to-have extras (small modals / detail shots)
 
