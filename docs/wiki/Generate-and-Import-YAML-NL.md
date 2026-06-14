@@ -6,8 +6,9 @@
 
 Klik op **&lt;/&gt; Genereer YAML** om de (verstelbare) code-lade te openen.
 
-> 📷 *Screenshot: de Genereer YAML-lade met code en de Kopiëren/Download-knoppen.* →
-> `docs/screenshots/Generate-YAML.png` *(bestaat al)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Generate-YAML-NL.png" alt="Generate-YAML" width="100%">
+</p>
 
 - Er draait eerst een **pre-flight-check**: als een laag naar een ontbrekende/lege
   **bron** wijst (de oorzaak van ESPHome's `Couldn't find ID 'undefined'`), een
@@ -65,8 +66,9 @@ display:
 
 Plak een bestaande ESPHome-config via **YAML importeren**:
 
-> 📷 *Screenshot: het importsamenvatting-venster.* → `docs/screenshots/Import-Summary.png`
-> *(bestaat al)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Import-Summary-NL.png" alt="Import-Summary" width="100%">
+</p>
 
 - Alleen `font:`, `color:` en `homeassistant`-platform `sensor:` / `text_sensor:`
   worden gelezen; al het andere (wifi, api, secrets, …) wordt genegeerd — geen errors.
@@ -76,3 +78,9 @@ Plak een bestaande ESPHome-config via **YAML importeren**:
   zijn.
 - Een YAML die de studio zelf genereerde (met de herstelcode) wordt **1-op-1** hersteld,
   inclusief alle schermen.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Generate-Preflight-NL.png" alt="Generate-Preflight" width="100%">
+  <br><em>Pre-flight-check voordat de code-lade opent</em>
+</p>
+

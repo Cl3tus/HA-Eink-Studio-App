@@ -4,9 +4,9 @@
 
 Three independent alignment aids, all toggled in the **status bar**.
 
-> 📷 *Screenshot: canvas with rulers on, two guide lines (one vertical, one
-> horizontal) crossing, and an element snapped into the cross.* →
-> `docs/screenshots/Rulers-Guides.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Rulers-Guides.png" alt="Rulers-Guides" width="100%">
+</p>
 
 ### Grid + Snap grid
 

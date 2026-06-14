@@ -6,9 +6,9 @@ Open **Sources** (top bar) to manage the list of values your design can bind to.
 row maps a friendly **id** to a Home Assistant **entity_id**, a **sample** value and a
 **type (lambda)**.
 
-> 📷 *Screenshot: the Sources dialog with the id / entity_id / type (lambda) / type (HA)
-> columns and the per-row snap icon.* → `docs/screenshots/Sources-Picker.png`
-> *(already exists)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Sources-Picker.png" alt="Sources-Picker" width="100%">
+</p>
 
 ### Columns
 
@@ -43,3 +43,9 @@ trace on a non-numeric source can crash ESPHome — see
 The **sample** column is **off by default**; tick **Sample column** at the bottom to
 show it (remembered per profile). Samples drive the value/condition previews while
 **Live** is off, so you can design realistic layouts without a live connection.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Sources-Type-Mismatch.png" alt="Sources-Type-Mismatch" width="100%">
+  <br><em>A lambda↔HA type mismatch: the red ✗ and ↺ snap icon</em>
+</p>
+

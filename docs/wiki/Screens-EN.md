@@ -6,8 +6,9 @@ A design always has a **Main** screen and an optional **Waiting-for-data** scree
 can have **up to 10** Home Assistant–switchable screens. Switch between them with the
 selector above the canvas.
 
-> 📷 *Screenshot: the screen selector with the add / duplicate / rename / delete buttons
-> and the device-rotation read-out.* → `docs/screenshots/Screens.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Screens.png" alt="Screens" width="100%">
+</p>
 
 ### Waiting screen
 
@@ -59,3 +60,9 @@ interval — no `input_boolean` or `configuration.yaml` edit needed.
 > Single-screen designs generate exactly the same YAML as before, your existing layout
 > migrates into the first screen automatically, and the base64 recovery code round-trips
 > all screens.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Screen-Control-Blocks.png" alt="Screen-Control-Blocks" width="100%">
+  <br><em>Screen control in HA + the rotation switch</em>
+</p>
+

@@ -51,9 +51,9 @@ Per language (`-EN` / `-NL`): `Installation`, `Quick-Start`, `Interface-Tour`,
 
 ## Screenshots
 
-The pages reference images under `docs/screenshots/`. Some already exist; the ones still
-to be captured are listed in **[SCREENSHOTS-TODO.md](SCREENSHOTS-TODO.md)**.
+The pages reference images under `docs/screenshots/`, split per language: **English** pages
+use `docs/screenshots/en/<File>.png`, **Nederlands** pages use `docs/screenshots/nl/<File>-NL.png`.
 
 Wiki pages load images via absolute raw URLs, e.g.
-`https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/<File>.png`
+`https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/<File>.png`
 — so commit the PNGs to the main repo first, then they render in the wiki.

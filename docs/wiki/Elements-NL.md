@@ -4,8 +4,9 @@
 
 Sleep een element uit het palet op het canvas en bewerk het in de inspector.
 
-> 📷 *Screenshot: het element-palet (links) naast het canvas met van elk element
-> één geplaatst.* → `docs/screenshots/Elements-Overview.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Elements-Overview-NL.png" alt="Elements-Overview" width="100%">
+</p>
 
 | Element | Wat het is | Genereert |
 |---------|------------|-----------|

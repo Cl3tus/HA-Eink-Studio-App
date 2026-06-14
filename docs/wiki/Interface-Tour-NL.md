@@ -2,8 +2,9 @@
 
 *🇬🇧 [English](Interface-Tour-EN) · 🏠 [Home](Home-NL)*
 
-> 📷 *Screenshot: de volledige editor met aanduidingen bij de bovenbalk, linkerpaneel,
-> canvas, statusbalk en inspector.* → `docs/screenshots/Interface-Overview.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Interface-Overview-NL.png" alt="Interface-Overview" width="100%">
+</p>
 
 ### Bovenbalk
 

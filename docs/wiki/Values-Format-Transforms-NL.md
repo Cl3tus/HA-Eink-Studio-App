@@ -4,8 +4,9 @@
 
 Selecteer een **Waarde**-element → inspector → **Bron** + **Opmaak & transform**.
 
-> 📷 *Screenshot: de inspector van een Waarde-element met Bron + Opmaak & transform.*
-> → `docs/screenshots/Inspector-Value.png` *(bestaat al)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Inspector-Value-NL.png" alt="Inspector-Value" width="100%">
+</p>
 
 ### Bron
 

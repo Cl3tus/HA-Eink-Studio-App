@@ -13,6 +13,10 @@ schrijft nooit naar je device-config of je HA-states.
 
 ---
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/E-ink-Studio-Editor-Screenshot-Dark-Light-NL.png" alt="E-ink-Studio-Editor-Screenshot-Dark-Light" width="100%">
+</p>
+
 ## 📚 Pagina's
 
 | Pagina | Inhoud |

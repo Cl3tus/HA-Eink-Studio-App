@@ -4,8 +4,9 @@
 
 Open **📁 Bestanden** (bovenbalk) — of ga naar `files.html`.
 
-> 📷 *Screenshot: de bestandsbeheerder met de boom en een bestand geselecteerd.* →
-> `docs/screenshots/File-Manager.png` *(zie ook de bestaande File-Manager-screenshots)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/File-Manager-NL.png" alt="File-Manager" width="100%">
+</p>
 
 ### Wat je kunt doen
 
@@ -19,8 +20,10 @@ Open **📁 Bestanden** (bovenbalk) — of ga naar `files.html`.
 - In-app **bevestigingsvensters** (wijzigingen verwerpen, bestanden verwijderen) passen
   bij de editor — geen native browser-pop-ups.
 
-> 📷 *Screenshots staan al in de repo: `E-ink-Studio-File-Manager-Editor.png`,
-> `E-ink-Studio-File-Manager-Font-Viewer.png`.*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/File-Manager-Editor-NL.png" alt="File-Manager-Editor" width="49%">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/File-Manager-Font-Viewer-NL.png" alt="File-Manager-Font-Viewer" width="49%">
+</p>
 
 ### Opslagstructuur (SAMBA)
 

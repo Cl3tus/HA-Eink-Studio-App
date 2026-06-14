@@ -4,8 +4,9 @@
 
 A **Graph** draws one or more sensor traces via ESPHome's `graph:` component.
 
-> 📷 *Screenshot: a Graph element selected, inspector showing traces + legend
-> settings.* → `docs/screenshots/Graph-Legend.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Graph-Legend.png" alt="Graph-Legend" width="100%">
+</p>
 
 ### Position & size
 

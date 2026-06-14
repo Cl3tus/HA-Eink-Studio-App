@@ -2,8 +2,9 @@
 
 *🇳🇱 [Nederlands](Interface-Tour-NL) · 🏠 [Home](Home-EN)*
 
-> 📷 *Screenshot: the full editor with callouts on the top bar, left panel, canvas,
-> status bar and inspector.* → `docs/screenshots/Interface-Overview.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Interface-Overview.png" alt="Interface-Overview" width="100%">
+</p>
 
 ### Top bar
 

@@ -4,8 +4,9 @@
 
 Een **Grafiek** tekent één of meer sensor-traces via ESPHome's `graph:`-component.
 
-> 📷 *Screenshot: een Grafiek-element geselecteerd, inspector met traces +
-> legenda-instellingen.* → `docs/screenshots/Graph-Legend.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Graph-Legend-NL.png" alt="Graph-Legend" width="100%">
+</p>
 
 ### Positie & maat
 

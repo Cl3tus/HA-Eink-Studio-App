@@ -6,8 +6,9 @@ Een ontwerp heeft altijd een **Hoofd**-scherm en een optioneel **Wachten-op-data
 en kan **tot 10** via Home Assistant schakelbare schermen hebben. Wissel ertussen met de
 kiezer boven het canvas.
 
-> 📷 *Screenshot: de schermkiezer met de knoppen toevoegen / dupliceren / hernoemen /
-> verwijderen en de device-rotatie.* → `docs/screenshots/Screens.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Screens-NL.png" alt="Screens" width="100%">
+</p>
 
 ### Wachtscherm
 
@@ -60,3 +61,9 @@ ververs-interval naar het volgende scherm — geen `input_boolean` of
 > Ontwerpen met één scherm genereren exact dezelfde YAML als voorheen, je bestaande
 > lay-out migreert automatisch naar het eerste scherm, en de base64-herstelcode
 > round-trip't alle schermen.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Screen-Control-Blocks-NL.png" alt="Screen-Control-Blocks" width="100%">
+  <br><em>Schermbediening in HA + de rotatie-switch</em>
+</p>
+

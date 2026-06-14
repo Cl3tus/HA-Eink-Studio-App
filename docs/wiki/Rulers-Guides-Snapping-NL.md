@@ -4,9 +4,9 @@
 
 Drie onafhankelijke uitlijn-hulpmiddelen, allemaal te schakelen in de **statusbalk**.
 
-> 📷 *Screenshot: canvas met linialen aan, twee hulplijnen (één verticaal, één
-> horizontaal) die kruisen, en een element gesnapt in het kruis.* →
-> `docs/screenshots/Rulers-Guides.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Rulers-Guides-NL.png" alt="Rulers-Guides" width="100%">
+</p>
 
 ### Raster + Snap raster
 

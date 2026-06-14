@@ -4,8 +4,10 @@
 
 From an empty canvas to a ready-to-paste YAML in six steps.
 
-> 📷 *Screenshot: the editor right after opening, empty canvas with the palette on the
-> left.* → save as `docs/screenshots/Quick-Start-Empty.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Quick-Start-Empty-Darkmode.png" alt="Quick-Start-Empty-Darkmode" width="49%">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Quick-Start-Empty-Lightmode.png" alt="Quick-Start-Empty-Lightmode" width="49%">
+</p>
 
 1. **Open** E-ink Studio from the sidebar.
 2. **Pull live data** — click **○ Live** in the top bar to fetch your real Home

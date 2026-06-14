@@ -4,8 +4,9 @@
 
 Drag an element from the palette onto the canvas, then edit it in the inspector.
 
-> 📷 *Screenshot: the element palette (left) next to the canvas with one of each
-> element placed.* → `docs/screenshots/Elements-Overview.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Elements-Overview.png" alt="Elements-Overview" width="100%">
+</p>
 
 | Element | What it is | Generates |
 |---------|------------|-----------|

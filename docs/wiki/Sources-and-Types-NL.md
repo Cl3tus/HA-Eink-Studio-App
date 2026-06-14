@@ -6,9 +6,9 @@ Open **Bronnen** (bovenbalk) om de lijst met waarden te beheren waaraan je ontwe
 koppelen. Elke rij mapt een herkenbare **id** aan een Home Assistant **entity_id**, een
 **sample**-waarde en een **type (lambda)**.
 
-> 📷 *Screenshot: het Bronnen-venster met de kolommen id / entity_id / type (lambda) /
-> type (HA) en het snap-icoon per rij.* → `docs/screenshots/Sources-Picker.png`
-> *(bestaat al)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Sources-Picker-NL.png" alt="Sources-Picker" width="100%">
+</p>
 
 ### Kolommen
 
@@ -44,3 +44,9 @@ belandt (een grafiek-trace op een niet-numerieke bron kan ESPHome laten crashen 
 De **sample**-kolom staat **standaard uit**; vink **Sample column** onderaan aan om hem
 te tonen (per profiel onthouden). Samples voeden de waarde-/conditie-previews terwijl
 **Live** uit staat, zodat je realistische lay-outs kunt ontwerpen zonder live verbinding.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Sources-Type-Mismatch-NL.png" alt="Sources-Type-Mismatch" width="100%">
+  <br><em>Een lambda↔HA type-mismatch: de rode ✗ en het ↺ snap-icoon</em>
+</p>
+

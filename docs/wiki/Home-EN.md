@@ -13,6 +13,10 @@ never writes to your device config or your HA states.
 
 ---
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/E-ink-Studio-Editor-Screenshot-Dark-Light.png" alt="E-ink-Studio-Editor-Screenshot-Dark-Light" width="100%">
+</p>
+
 ## 📚 Pages
 
 | Page | What's in it |

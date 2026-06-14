@@ -4,8 +4,9 @@
 
 Open **Fonts** (bovenbalk).
 
-> 📷 *Screenshot: het Fonts-venster met de fontlijst en het "Font toevoegen"-formulier,
-> een inline preview open.* → `docs/screenshots/Fonts-Dialog.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Fonts-Dialog-NL.png" alt="Fonts-Dialog" width="100%">
+</p>
 
 ### Een font toevoegen
 
@@ -68,3 +69,9 @@ Stel het **model** in bij [Profiel-instellingen](Profiles-and-YAML-Blocks-NL) en
 palet past zich aan. Elke kleur wordt een `color:`-entry in de YAML. Zie ook
 **Negatief-modus** op de [Profielen & YAML-blokken](Profiles-and-YAML-Blocks-NL)-pagina
 voor een ontwerp met een zwart scherm.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Weight-Preview-NL.png" alt="Weight-Preview" width="100%">
+  <br><em>Live gewicht-preview — elke weight rendert apart</em>
+</p>
+

@@ -4,8 +4,9 @@
 
 Open **📁 Files** (top bar) — or browse to `files.html`.
 
-> 📷 *Screenshot: the file manager with the tree and a file selected.* →
-> `docs/screenshots/File-Manager.png` *(see also the existing File-Manager screenshots)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/File-Manager.png" alt="File-Manager" width="100%">
+</p>
 
 ### What you can do
 
@@ -18,8 +19,10 @@ Open **📁 Files** (top bar) — or browse to `files.html`.
 - In-app **confirm dialogs** (discard unsaved changes, delete files) match the editor —
   no native browser pop-ups.
 
-> 📷 *Screenshots already in the repo: `E-ink-Studio-File-Manager-Editor.png`,
-> `E-ink-Studio-File-Manager-Font-Viewer.png`.*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/File-Manager-Editor.png" alt="File-Manager-Editor" width="49%">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/File-Manager-Font-Viewer.png" alt="File-Manager-Font-Viewer" width="49%">
+</p>
 
 ### Storage layout (SAMBA)
 

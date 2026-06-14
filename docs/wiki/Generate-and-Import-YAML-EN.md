@@ -6,8 +6,9 @@
 
 Click **&lt;/&gt; Generate YAML** to open the (resizable) code drawer.
 
-> 📷 *Screenshot: the Generate YAML drawer with code and the Copy/Download buttons.* →
-> `docs/screenshots/Generate-YAML.png` *(already exists)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Generate-YAML.png" alt="Generate-YAML" width="100%">
+</p>
 
 - A **pre-flight check** runs first: if a layer points at a missing/empty **source**
   (the cause of ESPHome's `Couldn't find ID 'undefined'`), a missing **condition/graph**
@@ -65,8 +66,9 @@ display:
 
 Paste an existing ESPHome config via **Import YAML**:
 
-> 📷 *Screenshot: the import summary dialog.* → `docs/screenshots/Import-Summary.png`
-> *(already exists)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Import-Summary.png" alt="Import-Summary" width="100%">
+</p>
 
 - Only `font:`, `color:` and `homeassistant`-platform `sensor:` / `text_sensor:`
   blocks are read; everything else (wifi, api, secrets, …) is ignored — no errors.
@@ -75,3 +77,9 @@ Paste an existing ESPHome config via **Import YAML**:
   of what was and wasn't imported, plus which YAML blocks are present.
 - A YAML the studio generated itself (with the recovery code) is restored **1-to-1**,
   including all screens.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Generate-Preflight.png" alt="Generate-Preflight" width="100%">
+  <br><em>Pre-flight check before the code drawer opens</em>
+</p>
+

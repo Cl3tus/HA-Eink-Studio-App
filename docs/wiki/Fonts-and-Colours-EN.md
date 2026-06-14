@@ -4,8 +4,9 @@
 
 Open **Fonts** (top bar).
 
-> 📷 *Screenshot: the Fonts dialog with the font list and the "Add font" form, an
-> inline preview open.* → `docs/screenshots/Fonts-Dialog.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Fonts-Dialog.png" alt="Fonts-Dialog" width="100%">
+</p>
 
 ### Adding a font
 
@@ -66,3 +67,9 @@ Colours follow the display's **colour type** automatically:
 Set the **model** in [Profile settings](Profiles-and-YAML-Blocks-EN) and the palette
 adapts. Each colour becomes a `color:` entry in the YAML. See also **Negative mode** on
 the [Profiles & YAML Blocks](Profiles-and-YAML-Blocks-EN) page for a black-screen design.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Weight-Preview.png" alt="Weight-Preview" width="100%">
+  <br><em>Live weight preview — every weight renders distinctly</em>
+</p>
+

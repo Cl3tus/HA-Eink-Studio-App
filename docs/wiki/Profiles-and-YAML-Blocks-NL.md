@@ -5,8 +5,9 @@
 Een **profiel** is één display-ontwerp. Houd er meerdere naast elkaar met de
 profielkiezer; **+** voegt er een toe en **⚙** opent de instellingen.
 
-> 📷 *Screenshot: Profiel-instellingen open, met de modelkiezer en de "Generated YAML
-> Blocks"-schakelaars.* → `docs/screenshots/Profile-Yaml-Blocks.png` *(bestaat al)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Profile-Yaml-Blocks-NL.png" alt="Profile-Yaml-Blocks" width="100%">
+</p>
 
 ### Device
 
@@ -48,3 +49,14 @@ je config staan:
 dupliceren** / **Profiel verwijderen** links en **Sluiten** / **Opslaan** rechts.
 Dupliceren kopieert het hele ontwerp (de kopie krijgt `(1)`, `(2)`, …); profielen worden
 als JSON opgeslagen (zie [Bestandsbeheer & SAMBA](File-Manager-and-SAMBA-NL)).
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Negative-Mode-NL.png" alt="Negative-Mode" width="100%">
+  <br><em>Negatief-modus — een zwart scherm met witte inhoud</em>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Profile-Settings-Footer-NL.png" alt="Profile-Settings-Footer" width="100%">
+  <br><em>Footer: Dupliceren/Verwijderen links, Sluiten/Opslaan rechts (Opslaan grijs)</em>
+</p>
+

@@ -5,8 +5,9 @@
 A **profile** is one display design. Keep several side by side with the profile picker;
 **+** adds one and **⚙** opens its settings.
 
-> 📷 *Screenshot: Profile settings open, with the model picker and the "Generated YAML
-> Blocks" toggles.* → `docs/screenshots/Profile-Yaml-Blocks.png` *(already exists)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Profile-Yaml-Blocks.png" alt="Profile-Yaml-Blocks" width="100%">
+</p>
 
 ### Device
 
@@ -45,3 +46,14 @@ elsewhere in your config:
 **Duplicate profile** / **Delete profile** on the left and **Close** / **Save** on the
 right. Duplicate copies the whole design (the copy gets `(1)`, `(2)`, …); profiles are
 saved as JSON (see [File Manager & SAMBA](File-Manager-and-SAMBA-EN)).
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Negative-Mode.png" alt="Negative-Mode" width="100%">
+  <br><em>Negative mode — a black screen with white content</em>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Profile-Settings-Footer.png" alt="Profile-Settings-Footer" width="100%">
+  <br><em>Footer: Duplicate/Delete left, Close/Save right (Save greyed out)</em>
+</p>
+

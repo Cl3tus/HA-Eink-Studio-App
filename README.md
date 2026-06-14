@@ -9,7 +9,7 @@ add-on with its own sidebar panel (Ingress). Drag elements onto a paper-accurate
 canvas, bind them to **live Home Assistant sensor values**, and generate
 ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels.
 
-[![GitHub release](https://img.shields.io/badge/version-3.9.29-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App)
+[![GitHub release](https://img.shields.io/badge/version-3.9.30-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App)
 [![Project Stage](https://img.shields.io/badge/project%20stage-experimental-yellow.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App)
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -22,7 +22,7 @@ ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels
 ---
 
 <p align="center">
-  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot-Dark-Light.png" alt="E-ink Studio editor — dark & light" width="100%">
+  <img src="docs/screenshots/en/E-ink-Studio-Editor-Screenshot-Dark-Light.png" alt="E-ink Studio editor — dark & light" width="100%">
 </p>
 
 ## ✨ Why
@@ -111,40 +111,40 @@ copy the generated YAML straight into your device.
 **Editor — dark & light**
 
 <p align="center">
-  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot.png" alt="Editor — dark mode" width="49%">
-  <img src="docs/screenshots/E-ink-Studio-Editor-Screenshot-Lightmode.png" alt="Editor — light mode" width="49%">
+  <img src="docs/screenshots/en/Screenshot-Darkmode.png" alt="Editor — dark mode" width="49%">
+  <img src="docs/screenshots/en/Screenshot-Lightmode.png" alt="Editor — light mode" width="49%">
 </p>
 
 **Built-in file manager**
 
 <p align="center">
-  <img src="docs/screenshots/E-ink-Studio-File-Manager-Screenshot1.png" alt="File manager" width="100%">
+  <img src="docs/screenshots/en/File-Manager.png" alt="File manager" width="100%">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/E-ink-Studio-File-Manager-Editor.png" alt="File manager — text editor" width="49%">
-  <img src="docs/screenshots/E-ink-Studio-File-Manager-Font-Viewer.png" alt="File manager — font viewer" width="49%">
+  <img src="docs/screenshots/en/File-Manager-Editor.png" alt="File manager — text editor" width="49%">
+  <img src="docs/screenshots/en/File-Manager-Font-Viewer.png" alt="File manager — font viewer" width="49%">
 </p>
 
 **Inspector — a Value element** (source + format & transform), **Element palette & layers**
 
 <p align="center">
-  <img src="docs/screenshots/Inspector-Value.png" alt="Inspector — value element" width="49%">
-  <img src="docs/screenshots/Palette-Layers.png" alt="Element palette and layers" width="49%">
+  <img src="docs/screenshots/en/Inspector-Value.png" alt="Inspector — value element" width="49%">
+  <img src="docs/screenshots/en/Palette-Layers.png" alt="Element palette and layers" width="49%">
 </p>
 
 **Profile settings — per-block YAML toggles** &nbsp;·&nbsp; **Value sources picker**
 
 <p align="center">
-  <img src="docs/screenshots/Profile-Yaml-Blocks.png" alt="Generated YAML blocks" width="49%">
-  <img src="docs/screenshots/Sources-Picker.png" alt="Value sources picker" width="49%">
+  <img src="docs/screenshots/en/Profile-Yaml-Blocks.png" alt="Generated YAML blocks" width="49%">
+  <img src="docs/screenshots/en/Sources-Picker.png" alt="Value sources picker" width="49%">
 </p>
 
 **Generate YAML** &nbsp;·&nbsp; **Import summary**
 
 <p align="center">
-  <img src="docs/screenshots/Generate-YAML.png" alt="Generate YAML drawer" width="49%">
-  <img src="docs/screenshots/Import-Summary.png" alt="YAML import summary" width="49%">
+  <img src="docs/screenshots/en/Generate-YAML.png" alt="Generate YAML drawer" width="49%">
+  <img src="docs/screenshots/en/Import-Summary.png" alt="YAML import summary" width="49%">
 </p>
 
 ---

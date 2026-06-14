@@ -4,8 +4,9 @@
 
 Select a **Value** element → inspector → **Source** + **Format & transform**.
 
-> 📷 *Screenshot: the inspector of a Value element showing Source + Format & transform.*
-> → `docs/screenshots/Inspector-Value.png` *(already exists)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/en/Inspector-Value.png" alt="Inspector-Value" width="100%">
+</p>
 
 ### Source
 

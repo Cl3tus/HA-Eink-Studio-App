@@ -4,8 +4,10 @@
 
 Van een leeg canvas naar kant-en-klare YAML in zes stappen.
 
-> 📷 *Screenshot: de editor net na openen, leeg canvas met het palet links.* →
-> opslaan als `docs/screenshots/Quick-Start-Empty.png`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Quick-Start-Empty-Darkmode-NL.png" alt="Quick-Start-Empty-Darkmode" width="49%">
+  <img src="https://raw.githubusercontent.com/Cl3tus/HA-Eink-Studio-App/main/docs/screenshots/nl/Quick-Start-Empty-Lightmode-NL.png" alt="Quick-Start-Empty-Lightmode" width="49%">
+</p>
 
 1. **Open** E-ink Studio in de zijbalk.
 2. **Live data ophalen** — klik op **○ Live** in de bovenbalk om je echte Home
