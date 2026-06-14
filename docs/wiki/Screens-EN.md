@@ -50,11 +50,21 @@ Choose them under **Profile settings → Generated YAML Blocks → Screen contro
 | **Both** | The dropdown *and* the buttons. |
 | **None** | No HA controls — the screen select stays `internal: true` so the display still works while you drive it from your own automations. |
 
-### Screen rotation (HA switch)
+### Display-mode switches (Auto Refresh / Static / Rotation)
 
-**Screen rotation (HA switch)** (same panel) adds a template `switch` exposed to Home
-Assistant. While it's on, the display advances to the next screen on every refresh
-interval — no `input_boolean` or `configuration.yaml` edit needed.
+When **Refresh logic** is on, the YAML also generates interlocked Home Assistant
+**switches** that decide what the display does each interval. **Exactly one is always on**
+(default **Auto Refresh**, remembered across reboots):
+
+| Switch | What it does on each interval |
+|--------|-------------------------------|
+| **Auto Refresh** | Refreshes the display *when a bound sensor has new data* (logs + skips the round otherwise). |
+| **Static Display** | Freezes the screen — after the first render it stops refreshing. |
+| **Screen Rotation** | Advances to the next screen (needs ≥2 screens + the rotation option). Turning it on also turns Auto Refresh on. |
+
+Turning one on turns the conflicting ones off, and you can never leave all three off, so
+there's always a defined mode. Auto Refresh and Static come with **Refresh logic**; Screen
+Rotation is the **Screen rotation** option (multi-screen only).
 
 > Screen controls and rotation are greyed out unless *Use multiple screens* is on.
 > Single-screen designs generate exactly the same YAML as before, your existing layout

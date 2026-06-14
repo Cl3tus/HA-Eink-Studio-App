@@ -32,9 +32,10 @@ Choose exactly which blocks the generator emits — handy when some of these alr
 elsewhere in your config:
 
 - **Refresh logic** — `esphome` on_boot + `script` + `time`, with boot priority, delay,
-  wait timeout and the refresh interval (minutes).
-- **Screen control in HA** (dropdown / buttons / both / none) and **Screen rotation
-  (HA switch)** — greyed out unless *Use multiple screens* is on (see [Screens](Screens-EN)).
+  wait timeout and the refresh interval (minutes). Also generates the **Auto Refresh** and
+  **Static Display** mode switches (see [Screens](Screens-EN)).
+- **Screen control in HA** (dropdown / buttons / both / none) and the **Screen Rotation**
+  mode switch — greyed out unless *Use multiple screens* is on (see [Screens](Screens-EN)).
 - **globals**, **font**, **color**, **sensor**, **text_sensor** — each on/off.
 - **SPI bus** — `clk_pin` / `mosi_pin`.
 - **Display pins** — `data_rate`, `cs_pin` (+ ignore_strapping), `dc_pin`, `busy_pin`

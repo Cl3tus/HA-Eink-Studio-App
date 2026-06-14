@@ -50,12 +50,21 @@ Kies die bij **Profiel-instellingen → Generated YAML Blocks → Schermbedienin
 | **Beide** | De dropdown *én* de buttons. |
 | **Geen** | Geen HA-bediening — de schermselect blijft `internal: true`, zodat het display blijft werken terwijl je hem vanuit je eigen automations aanstuurt. |
 
-### Schermrotatie (HA-switch)
+### Display-mode-switches (Automatisch verversen / Statisch / Rotatie)
 
-**Schermrotatie (HA-switch)** (zelfde paneel) voegt een template `switch` toe die aan
-Home Assistant wordt aangeboden. Zolang die aan staat, springt het display bij elk
-ververs-interval naar het volgende scherm — geen `input_boolean` of
-`configuration.yaml`-bewerking nodig.
+Met **Refresh-logica** aan genereert de YAML ook gekoppelde Home Assistant-**switches**
+die bepalen wat het display elk interval doet. **Er staat altijd precies één aan**
+(standaard **Automatisch verversen**, onthouden over reboots):
+
+| Switch | Wat het elk interval doet |
+|--------|---------------------------|
+| **Automatisch verversen** | Ververst het display *als een gekoppelde sensor nieuwe data heeft* (logt + slaat de ronde anders over). |
+| **Statisch Display** | Bevriest het scherm — na de eerste render stopt het verversen. |
+| **Scherm rotatie** | Schuift naar het volgende scherm (vereist ≥2 schermen + de rotatie-optie). Aanzetten zet ook Automatisch verversen aan. |
+
+Eén aanzetten zet de conflicterende uit, en je kunt nooit alle drie uit laten staan — er
+is dus altijd een gedefinieerde modus. Automatisch verversen en Statisch horen bij
+**Refresh-logica**; Scherm rotatie is de **Schermrotatie**-optie (alleen multi-screen).
 
 > Schermbediening en rotatie zijn grijs tenzij *Meerdere schermen gebruiken* aan staat.
 > Ontwerpen met één scherm genereren exact dezelfde YAML als voorheen, je bestaande

@@ -34,9 +34,10 @@ Kies precies welke blokken de generator uitschrijft — handig als sommige al el
 je config staan:
 
 - **Refresh-logica** — `esphome` on_boot + `script` + `time`, met boot-prioriteit,
-  vertraging, wacht-timeout en het ververs-interval (minuten).
-- **Schermbediening in HA** (dropdown / buttons / beide / geen) en **Schermrotatie
-  (HA-switch)** — grijs tenzij *Meerdere schermen gebruiken* aan staat (zie
+  vertraging, wacht-timeout en het ververs-interval (minuten). Genereert ook de
+  **Automatisch verversen**- en **Statisch Display**-mode-switches (zie [Schermen](Screens-NL)).
+- **Schermbediening in HA** (dropdown / buttons / beide / geen) en de **Scherm rotatie**-
+  mode-switch — grijs tenzij *Meerdere schermen gebruiken* aan staat (zie
   [Schermen](Screens-NL)).
 - **globals**, **font**, **color**, **sensor**, **text_sensor** — elk aan/uit.
 - **SPI-bus** — `clk_pin` / `mosi_pin`.
