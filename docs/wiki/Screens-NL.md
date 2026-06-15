@@ -41,14 +41,15 @@ scherm uit de HA-bediening, en een scherm wisselen forceert een **directe hertek
 
 ### Home Assistant-bediening
 
-Kies die bij **Profiel-instellingen → Generated YAML Blocks → Schermbediening in HA**:
+Kies die direct onder de **Meerdere schermen gebruiken**-schakelaar in Profiel-instellingen
+(**Schermbediening in HA**, alleen zichtbaar als meerdere schermen aan staat):
 
 | Optie | Wat het genereert |
 |-------|-------------------|
-| **Dropdown (select)** | Een template `select`; de opties zijn je schermnamen. |
-| **Buttons** | Eén template `button` per scherm (handig op een dashboard). |
-| **Beide** | De dropdown *én* de buttons. |
 | **Geen** | Geen HA-bediening — de schermselect blijft `internal: true`, zodat het display blijft werken terwijl je hem vanuit je eigen automations aanstuurt. |
+| **Alleen dropdown** | Een template `select`; de opties zijn je schermnamen. |
+| **Alleen knoppen** | Eén template `button` per scherm (handig op een dashboard). |
+| **Dropdown & knoppen** | De dropdown *én* de buttons. |
 
 ### Display-mode-switches (Automatisch verversen / Statisch / Rotatie)
 
@@ -60,11 +61,12 @@ die bepalen wat het display elk interval doet. **Er staat altijd precies één a
 |--------|---------------------------|
 | **Automatisch verversen** | Ververst het display *als een gekoppelde sensor nieuwe data heeft* (logt + slaat de ronde anders over). |
 | **Statisch Display** | Bevriest het scherm — na de eerste render stopt het verversen. |
-| **Scherm rotatie** | Schuift naar het volgende scherm (vereist ≥2 schermen + de rotatie-optie). Aanzetten zet ook Automatisch verversen aan. |
+| **Scherm rotatie** | Schuift elk interval naar het volgende scherm; komt automatisch bij ≥2 schermen. Aanzetten zet ook Automatisch verversen aan. |
 
 Eén aanzetten zet de conflicterende uit, en je kunt nooit alle drie uit laten staan — er
 is dus altijd een gedefinieerde modus. Automatisch verversen en Statisch horen bij
-**Refresh-logica**; Scherm rotatie is de **Schermrotatie**-optie (alleen multi-screen).
+**Refresh-logica**; Scherm rotatie komt automatisch bij ≥2 schermen. De HA-mode-switches
+hebben `entity_category: config`, dus ze staan in HA onder **Configuratie**.
 
 > Schermbediening en rotatie zijn grijs tenzij *Meerdere schermen gebruiken* aan staat.
 > Ontwerpen met één scherm genereren exact dezelfde YAML als voorheen, je bestaande

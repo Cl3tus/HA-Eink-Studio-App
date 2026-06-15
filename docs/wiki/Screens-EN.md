@@ -41,7 +41,8 @@ screen from the HA control, and switching a screen forces an **immediate redraw*
 
 ### Home Assistant controls
 
-Choose them under **Profile settings → Generated YAML Blocks → Screen control in HA**:
+Choose them right under the **Use multiple screens** toggle in Profile settings (**Screen
+controls in HA**, shown only while multiple screens is on):
 
 | Option | What it generates |
 |--------|-------------------|
@@ -60,11 +61,12 @@ When **Refresh logic** is on, the YAML also generates interlocked Home Assistant
 |--------|-------------------------------|
 | **Auto Refresh** | Refreshes the display *when a bound sensor has new data* (logs + skips the round otherwise). |
 | **Static Display** | Freezes the screen — after the first render it stops refreshing. |
-| **Screen Rotation** | Advances to the next screen (needs ≥2 screens + the rotation option). Turning it on also turns Auto Refresh on. |
+| **Screen Rotation** | Advances to the next screen each interval; generated automatically with ≥2 screens. Turning it on also turns Auto Refresh on. |
 
 Turning one on turns the conflicting ones off, and you can never leave all three off, so
 there's always a defined mode. Auto Refresh and Static come with **Refresh logic**; Screen
-Rotation is the **Screen rotation** option (multi-screen only).
+Rotation is added automatically with ≥2 screens. The HA mode switches use
+`entity_category: config`, so they appear under **Configuration** in Home Assistant.
 
 > Screen controls and rotation are greyed out unless *Use multiple screens* is on.
 > Single-screen designs generate exactly the same YAML as before, your existing layout

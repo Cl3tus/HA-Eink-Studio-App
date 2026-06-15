@@ -18,7 +18,8 @@ profielkiezer; **+** voegt er een toe en **⚙** opent de instellingen.
 - **Rotatie**, **breedte/hoogte**, **canvas-achtergrond** (alleen preview). Nieuwe
   profielen starten met een **20 px-raster**.
 - **Wachtscherm gebruiken** aan/uit en **Meerdere schermen gebruiken** aan/uit — zie
-  [Schermen](Screens-NL).
+  [Schermen](Screens-NL). Met meerdere schermen aan verschijnt er direct eronder een
+  **Schermbediening in HA**-dropdown (geen / alleen dropdown / alleen knoppen / beide).
 
 ### Negatief-modus
 
@@ -33,12 +34,12 @@ blijft.
 Kies precies welke blokken de generator uitschrijft — handig als sommige al elders in
 je config staan:
 
-- **Refresh-logica** — `esphome` on_boot + `script` + `time`, met boot-prioriteit,
-  vertraging, wacht-timeout en het ververs-interval (minuten). Genereert ook de
-  **Automatisch verversen**- en **Statisch Display**-mode-switches (zie [Schermen](Screens-NL)).
-- **Schermbediening in HA** (dropdown / buttons / beide / geen) en de **Scherm rotatie**-
-  mode-switch — grijs tenzij *Meerdere schermen gebruiken* aan staat (zie
-  [Schermen](Screens-NL)).
+- **Refresh-logica** — met boot-prioriteit, vertraging, wacht-timeout en het
+  ververs-interval (minuten). De **esphome on_boot**-, **script**- en **time**-blokken kun
+  je elk apart aanvinken (grijs als Refresh-logica uit staat, maar onthouden). Genereert ook
+  de **Automatisch verversen**- / **Statisch Display**-mode-switches (en **Scherm rotatie**
+  bij ≥2 schermen) — zie [Schermen](Screens-NL). Ze hebben `entity_category: config`, dus ze
+  staan in HA onder **Configuratie**.
 - **globals**, **font**, **color**, **sensor**, **text_sensor** — elk aan/uit.
 - **SPI-bus** — `clk_pin` / `mosi_pin`.
 - **Display-pinnen** — `data_rate`, `cs_pin` (+ ignore_strapping), `dc_pin`, `busy_pin`

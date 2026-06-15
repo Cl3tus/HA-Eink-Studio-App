@@ -17,7 +17,8 @@ A **profile** is one display design. Keep several side by side with the profile 
 - **Rotation**, **width/height**, **canvas background** (preview only). New profiles
   default to a **20 px grid**.
 - **Use waiting screen** on/off and **Use multiple screens** on/off — see
-  [Screens](Screens-EN).
+  [Screens](Screens-EN). With multiple screens on, a **Screen controls in HA** dropdown
+  (none / dropdown only / buttons only / both) appears right below it.
 
 ### Negative mode
 
@@ -31,11 +32,12 @@ the two base colours (`color_text` ↔ `color_bg`) swapped, so your design stays
 Choose exactly which blocks the generator emits — handy when some of these already live
 elsewhere in your config:
 
-- **Refresh logic** — `esphome` on_boot + `script` + `time`, with boot priority, delay,
-  wait timeout and the refresh interval (minutes). Also generates the **Auto Refresh** and
-  **Static Display** mode switches (see [Screens](Screens-EN)).
-- **Screen control in HA** (dropdown / buttons / both / none) and the **Screen Rotation**
-  mode switch — greyed out unless *Use multiple screens* is on (see [Screens](Screens-EN)).
+- **Refresh logic** — with boot priority, delay, wait timeout and the refresh interval
+  (minutes). The **esphome on_boot**, **script** and **time** blocks can each be ticked
+  individually (greyed out when Refresh logic is off, but remembered). Also generates the
+  **Auto Refresh** / **Static Display** mode switches (and **Screen Rotation** with ≥2
+  screens) — see [Screens](Screens-EN). They use `entity_category: config`, so they appear
+  under **Configuration** in Home Assistant.
 - **globals**, **font**, **color**, **sensor**, **text_sensor** — each on/off.
 - **SPI bus** — `clk_pin` / `mosi_pin`.
 - **Display pins** — `data_rate`, `cs_pin` (+ ignore_strapping), `dc_pin`, `busy_pin`
