@@ -1,0 +1,11 @@
+# https://editorconfig.org — keep line endings consistent with .gitattributes
+# (so the editor saves LF and Git doesn't warn about CRLF→LF normalisation).
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+
+# Windows batch scripts keep CRLF (matches .gitattributes).
+[*.{bat,cmd}]
+end_of_line = crlf
