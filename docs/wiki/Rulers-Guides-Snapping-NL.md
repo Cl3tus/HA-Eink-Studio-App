@@ -32,23 +32,36 @@ Zet **Lineaal** aan voor linialen langs de boven- en linkerrand.
   volgt op het canvas tijdens het slepen, en een gestippelde preview in de marge.
 - Elke hulplijn heeft een **marker** (driehoek) in z'n liniaal. **Sleep de marker** om
   de hulplijn te verplaatsen; **rechtsklik** een marker om die hulplijn te verwijderen.
-- **Rechtsklik op een lege liniaal** → *Verwijder gidsen* (wist die as).
+- **Rechtsklik op een lege liniaal** → *🚫 Verwijder gidsen* (wist die as).
 - Hulplijnen worden **per profiel** opgeslagen, samen met het ontwerp.
 - Hulplijnen staan **achter** je elementen, zodat ze je ontwerp nooit bedekken.
 
 ### Snap lineaal (pixel-perfect)
 
-Met **Snap lineaal** aan snapt een gesleept element z'n randen op de hulplijnen:
+Met **Snap lineaal** aan snapt een gesleept element z'n randen **of z'n midden** op de
+hulplijnen:
 
 - Het snapt de **zichtbare-ink-box** — de strakke box rond de daadwerkelijk getekende
   pixels (dezelfde box als de selectie-omlijning) — dus precies waar de pixels
   beginnen, niet op de lossere font-box.
-- De twee assen snappen **onafhankelijk**: een element kan tegelijk op een **verticale**
-  hulplijn (linker/rechter rand) én een **horizontale** hulplijn (boven/onder rand)
-  vastklikken — oftewel in het **kruis** waar twee hulplijnen samenkomen.
+- Elke as biedt **drie snap-punten**: een verticale hulplijn pakt de **linkerrand,
+  midden-x of rechterrand**; een horizontale hulplijn de **bovenrand, midden-y of
+  onderrand**.
+- De twee assen snappen **onafhankelijk**, dus een element kan tegelijk op een
+  **verticale** én een **horizontale** hulplijn vastklikken — waarbij elk van z'n
+  **negen box-ankers** (hoeken, randmiddens, midden) in het **kruis** valt waar twee
+  hulplijnen samenkomen.
 - De snap-box wordt één keer aan het begin van het slepen gemeten, dus het blijft
   soepel, ook bij grote tekst.
 - Houd **Shift** vast om snappen over te slaan.
+
+### Live snap-indicatoren
+
+Terwijl je sleept met Snap lineaal aan, verschijnen de **negen box-ankers** van het
+element als kleine puntjes, en het anker dat daadwerkelijk op een hulplijn vastklikt
+wordt getekend als een rode **bullseye** (richtkruis + concentrische ringen +
+middenpunt, met een witte halo) — zo zie je in één oogopslag **waar** het snapt. De
+markers schalen mee met de zoom en verdwijnen zodra je loslaat.
 
 ### Sluiten elkaar uit
 

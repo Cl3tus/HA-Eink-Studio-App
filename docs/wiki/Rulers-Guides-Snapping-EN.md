@@ -31,23 +31,35 @@ Enable **Ruler** to show rulers along the top and left edges.
   while you drag, and a dotted preview shows in the margin.
 - Each guide has a **marker** (triangle) in its ruler. **Drag the marker** to
   reposition the guide; **right-click** a marker to remove that guide.
-- **Right-click an empty ruler** → *Remove guides* (clears that axis).
+- **Right-click an empty ruler** → *🚫 Remove guides* (clears that axis).
 - Guides are stored **per profile** and saved with the design.
 - Guide lines sit **behind** your elements, so they never cover your design.
 
 ### Snap ruler (pixel-perfect)
 
-With **Snap ruler** on, dragging an element snaps its edges to the guides:
+With **Snap ruler** on, dragging an element snaps its edges **or its centre** to the
+guides:
 
 - It snaps the element's **visible-ink box** — the tight box around the actual drawn
   pixels (same box the selection outline hugs) — so it lands exactly where the pixels
   begin, not on the looser font-metric box.
-- The two axes snap **independently**: an element can lock onto a **vertical** guide
-  (left/right edge) and a **horizontal** guide (top/bottom edge) at the same time —
-  i.e. snap into the **cross** where two guides meet.
+- Each axis offers **three snap points**: a vertical guide catches the **left edge,
+  centre-x, or right edge**; a horizontal guide catches the **top edge, centre-y, or
+  bottom edge**.
+- The two axes snap **independently**, so an element can lock onto a **vertical** and a
+  **horizontal** guide at the same time — snapping any of its **nine box anchors**
+  (corners, edge mid-points, centre) into the **cross** where two guides meet.
 - The snap box is measured once when the drag starts, so it stays smooth even for
   large text.
 - Hold **Shift** to bypass snapping.
+
+### Live snap indicators
+
+While you drag with Snap ruler on, the element's **nine box anchors** appear as small
+dots, and the one anchor that's actually locked to a guide is drawn as a red
+**bullseye** reticle (crosshair + concentric rings + centre dot, with a white halo) —
+so you can see at a glance exactly **where** it snaps. The markers scale with zoom and
+clear as soon as you drop.
 
 ### Mutual exclusivity
 

@@ -9,7 +9,7 @@ add-on with its own sidebar panel (Ingress). Drag elements onto a paper-accurate
 canvas, bind them to **live Home Assistant sensor values**, and generate
 ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels.
 
-[![GitHub release](https://img.shields.io/badge/version-3.9.88-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App)
+[![GitHub release](https://img.shields.io/badge/version-3.9.89-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App)
 [![Project Stage](https://img.shields.io/badge/project%20stage-experimental-yellow.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App)
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -45,8 +45,10 @@ copy the generated YAML straight into your device.
   selection (left/center/right/top/middle/bottom) and reorder with **layer-order**
   buttons (front / back / forward / backward).
 - **Grid + snap** (8 / 10 / 16 / 20 / 25 / 40 px), plus **Figma-style rulers & guide
-  lines** with **pixel-perfect snapping** to the visible ink — snap into the cross of
-  a vertical and a horizontal guide at once. Hold **Shift** to move freely.
+  lines** with **pixel-perfect snapping** to the visible ink — snap an element's
+  **edges or its centre** into the cross of a vertical and a horizontal guide at once.
+  **Live snap indicators** show the nine box anchors while you drag, with a red
+  **bullseye** on the one that's locked. Hold **Shift** to move freely.
 - Sticky **status bar** with editable zoom (up to 500 %), grid, ruler and snap toggles.
 - **Multi-select** (rubber-band, Ctrl/Shift-click, layer checkboxes), **layers**
   panel with drag-to-reorder, visibility toggle, rename and delete.
