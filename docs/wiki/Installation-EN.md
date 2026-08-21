@@ -4,10 +4,10 @@
 
 ### 1. Add the repository
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FCl3tus%2FHA-Eink-Studio-App)
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FCl3tus%2FHA-Addons)
 
 Or manually: **Settings → Add-ons → Add-on Store → ⋮ (top right) → Repositories**,
-paste `https://github.com/Cl3tus/HA-Eink-Studio-App` and click **Add**.
+paste `https://github.com/Cl3tus/HA-Addons` and click **Add**.
 
 ### 2. Install & start
 
