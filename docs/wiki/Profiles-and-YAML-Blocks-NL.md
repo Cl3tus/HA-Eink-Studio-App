@@ -20,6 +20,11 @@ profielkiezer; **+** voegt er een toe en **⚙** opent de instellingen.
 - **Wachtscherm gebruiken** aan/uit en **Meerdere schermen gebruiken** aan/uit — zie
   [Schermen](Screens-NL). Met meerdere schermen aan verschijnt er direct eronder een
   **Schermbediening in HA**-dropdown (geen / alleen dropdown / alleen knoppen / beide).
+- **Afwezig-scherm gebruiken** / **Vakantie-scherm gebruiken** aan/uit — statische
+  override-schermen die het scherm bevriezen zolang ze actief zijn (Home Assistant
+  **Display Override** select + knoppen, Vakantie wint, overleeft een herstart). Een
+  **Away/Holiday-bediening in HA**-dropdown verschijnt zodra één ervan aan staat. Zie
+  [Schermen](Screens-NL).
 
 ### Negatief-modus
 

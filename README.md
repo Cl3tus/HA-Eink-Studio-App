@@ -9,7 +9,7 @@ add-on with its own sidebar panel (Ingress). Drag elements onto a paper-accurate
 canvas, bind them to **live Home Assistant sensor values**, and generate
 ready-to-paste ESPHome `display:` lambda + YAML — no more hand-counting pixels.
 
-[![GitHub release](https://img.shields.io/badge/version-3.9.112-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App)
+[![GitHub release](https://img.shields.io/badge/version-3.10.0-blue)](https://github.com/Cl3tus/HA-Eink-Studio-App)
 [![Project Stage](https://img.shields.io/badge/project%20stage-experimental-yellow.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App)
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/Cl3tus/HA-Eink-Studio-App/commits/main)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -189,7 +189,7 @@ default.
 Projects, fonts and profiles live in the add-on config folder, exposed over SAMBA at:
 
 ```
-\\<HA-IP>\addon_configs\<slug>_eink_studio\
+\\<HA-IP>\app_configs\<slug>_eink_studio\      (older HA: \\<HA-IP>\addon_configs\…)
 ├── projects/   ← saved designs (.json)
 ├── fonts/      ← uploaded fonts (incl. the bundled MDI ttf)
 └── profiles/   ← profile settings (.json)

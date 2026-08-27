@@ -27,6 +27,39 @@ kiezer boven het canvas.
   }
   ```
 
+### Afwezig- & Vakantie-override-schermen
+
+- Twee optionele **statische** schermen, per profiel aan te zetten via
+  **Profiel-instellingen → Afwezig-scherm gebruiken / Vakantie-scherm gebruiken**. Ze
+  staan in de kiezer direct na **Wachten** en vóór Scherm 1. Een leeg scherm valt terug
+  op een gecentreerde **"AFWEZIG"** / **"VAKANTIE"**-tekst (font `font_small`).
+- Ze genereren een Home Assistant **Display Override** `select` (opties *Normal / Away /
+  Holiday*) plus optionele knoppen per optie — stijl via **Away/Holiday-bediening in HA**
+  (geen / alleen dropdown / alleen knoppen / beide).
+- Zolang de override op *Away* of *Holiday* staat **bevriest het scherm**: de
+  interval-verversing **én** Scherm rotatie worden overgeslagen tot je terug op *Normal*
+  zet.
+- Bij beide van toepassing wint **Vakantie** (eerst gecheckt in de lambda). De
+  boot-*wachten-op-data*-tak draait nog steeds eerst.
+- Anders dan `screen_select` heeft `display_override` `restore_value: yes` — een lopende
+  Away/Holiday-status overleeft een herstart. Dat blijft crash-veilig omdat de
+  `on_value`-hertekening op `initial_data_received` gate't.
+
+  ```cpp
+  if (id(initial_data_received) == false) {
+    // Wachtscherm
+  } else {
+    int ov = id(display_override).active_index().value_or(0);
+    if (ov == 2) {        // Holiday
+      // Vakantie-scherm
+    } else if (ov == 1) { // Away
+      // Afwezig-scherm
+    } else {
+      // Normal: ontworpen scherm(en)
+    }
+  }
+  ```
+
 ### Meerdere schermen
 
 Zet **Meerdere schermen gebruiken** aan in [Profiel-instellingen](Profiles-and-YAML-Blocks-NL)

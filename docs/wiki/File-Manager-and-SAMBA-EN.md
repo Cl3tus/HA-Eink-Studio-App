@@ -27,7 +27,8 @@ Open **📁 Files** (top bar) — or browse to `files.html`.
 ### Storage layout (SAMBA)
 
 The same storage is reachable over **SAMBA** at
-`\\<HA-IP>\addon_configs\<slug>_eink_studio\`:
+`\\<HA-IP>\app_configs\<slug>_eink_studio\` (on older Home Assistant the share is
+still named `addon_configs` — both names point at the same folder):
 
 ```
 projects/   ← saved designs (.json)

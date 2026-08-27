@@ -28,7 +28,8 @@ Open **📁 Bestanden** (bovenbalk) — of ga naar `files.html`.
 ### Opslagstructuur (SAMBA)
 
 Dezelfde opslag is bereikbaar via **SAMBA** op
-`\\<HA-IP>\addon_configs\<slug>_eink_studio\`:
+`\\<HA-IP>\app_configs\<slug>_eink_studio\` (op oudere Home Assistant heet de share
+nog `addon_configs` — beide namen wijzen naar dezelfde map):
 
 ```
 projects/   ← opgeslagen ontwerpen (.json)

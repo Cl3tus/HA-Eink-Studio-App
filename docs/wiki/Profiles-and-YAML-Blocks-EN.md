@@ -19,6 +19,10 @@ A **profile** is one display design. Keep several side by side with the profile 
 - **Use waiting screen** on/off and **Use multiple screens** on/off — see
   [Screens](Screens-EN). With multiple screens on, a **Screen controls in HA** dropdown
   (none / dropdown only / buttons only / both) appears right below it.
+- **Use Away screen** / **Use Holiday screen** on/off — static override screens that
+  freeze the panel while active (Home Assistant **Display Override** select + buttons,
+  Holiday wins, survives a reboot). An **Away/Holiday controls in HA** dropdown appears
+  once either is on. See [Screens](Screens-EN).
 
 ### Negative mode
 

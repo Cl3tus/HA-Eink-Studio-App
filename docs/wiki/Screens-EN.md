@@ -27,6 +27,38 @@ selector above the canvas.
   }
   ```
 
+### Away & Holiday override screens
+
+- Two optional **static** screens, enabled per profile in **Profile settings → Use Away
+  screen / Use Holiday screen**. They sit in the selector right after **Waiting** and
+  before Screen 1. Empty screens fall back to a centred **"AWAY"** / **"HOLIDAY"** label
+  (font `font_small`).
+- They generate a Home Assistant **Display Override** `select` (options *Normal / Away /
+  Holiday*) plus optional per-option buttons — style set by **Away/Holiday controls in
+  HA** (none / dropdown only / buttons only / both).
+- While the override is on *Away* or *Holiday* the panel **freezes on that screen**: the
+  interval refresh **and** Screen Rotation are skipped until you set it back to *Normal*.
+- If both would apply, **Holiday wins** (checked first in the lambda). The boot
+  *waiting-for-data* branch still runs first.
+- Unlike `screen_select`, `display_override` has `restore_value: yes` — a running
+  Away/Holiday state survives a reboot. It stays crash-safe because the `on_value`
+  redraw is gated on `initial_data_received`.
+
+  ```cpp
+  if (id(initial_data_received) == false) {
+    // Waiting screen
+  } else {
+    int ov = id(display_override).active_index().value_or(0);
+    if (ov == 2) {        // Holiday
+      // Holiday screen
+    } else if (ov == 1) { // Away
+      // Away screen
+    } else {
+      // Normal: designed screen(s)
+    }
+  }
+  ```
+
 ### Multiple screens
 
 Turn on **Use multiple screens** in [Profile settings](Profiles-and-YAML-Blocks-EN)
