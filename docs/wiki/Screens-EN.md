@@ -34,8 +34,8 @@ selector above the canvas.
   before Screen 1. Empty screens fall back to a centred **"AWAY"** / **"HOLIDAY"** label
   (font `font_small`).
 - They generate a Home Assistant **Display Override** `select` (options *Normal / Away /
-  Holiday*) plus optional per-option buttons — style set by **Away/Holiday controls in
-  HA** (none / dropdown only / buttons only / both).
+  Holiday*) plus optional per-option buttons — style set by the shared **HA controls
+  (screen & override)** dropdown (none / dropdown only / buttons only / both).
 - While the override is on *Away* or *Holiday* the panel **freezes on that screen**: the
   interval refresh **and** Screen Rotation are skipped until you set it back to *Normal*.
 - If both would apply, **Holiday wins** (checked first in the lambda). The boot
@@ -73,15 +73,16 @@ screen from the HA control, and switching a screen forces an **immediate redraw*
 
 ### Home Assistant controls
 
-Choose them right under the **Use multiple screens** toggle in Profile settings (**Screen
-controls in HA**, shown only while multiple screens is on):
+One **HA controls (screen & override)** dropdown in Profile settings sets the style for
+**both** the screen picker (with multiple screens) *and* the Away/Holiday **Display
+Override**. It shows whenever multiple screens, Away, or Holiday is on:
 
 | Option | What it generates |
 |--------|-------------------|
-| **Dropdown (select)** | A template `select`; its options are your screen names. |
-| **Buttons** | One template `button` per screen (great for dashboards). |
+| **Dropdown (select)** | A template `select` — screen names for the picker, *Normal / Away / Holiday* for the override. |
+| **Buttons** | One template `button` per option (great for dashboards). |
 | **Both** | The dropdown *and* the buttons. |
-| **None** | No HA controls — the screen select stays `internal: true` so the display still works while you drive it from your own automations. |
+| **None** | No HA controls — the selects stay `internal: true` so the display still works while you drive them from your own automations. |
 
 ### Display-mode switches (Auto Refresh / Static / Rotation)
 
@@ -100,7 +101,8 @@ there's always a defined mode. Auto Refresh and Static come with **Refresh logic
 Rotation is added automatically with ≥2 screens. The HA mode switches use
 `entity_category: config`, so they appear under **Configuration** in Home Assistant.
 
-> Screen controls and rotation are greyed out unless *Use multiple screens* is on.
+> The screen-switching parts (rotation, per-screen buttons) need *Use multiple screens*;
+> the HA-controls dropdown also appears for Away/Holiday alone.
 > Single-screen designs generate exactly the same YAML as before, your existing layout
 > migrates into the first screen automatically, and the base64 recovery code round-trips
 > all screens.

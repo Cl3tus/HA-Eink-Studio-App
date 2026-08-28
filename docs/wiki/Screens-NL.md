@@ -34,8 +34,8 @@ kiezer boven het canvas.
   staan in de kiezer direct na **Wachten** en vóór Scherm 1. Een leeg scherm valt terug
   op een gecentreerde **"AFWEZIG"** / **"VAKANTIE"**-tekst (font `font_small`).
 - Ze genereren een Home Assistant **Display Override** `select` (opties *Normal / Away /
-  Holiday*) plus optionele knoppen per optie — stijl via **Away/Holiday-bediening in HA**
-  (geen / alleen dropdown / alleen knoppen / beide).
+  Holiday*) plus optionele knoppen per optie — stijl via de gedeelde dropdown
+  **HA-bediening (scherm & override)** (geen / alleen dropdown / alleen knoppen / beide).
 - Zolang de override op *Away* of *Holiday* staat **bevriest het scherm**: de
   interval-verversing **én** Scherm rotatie worden overgeslagen tot je terug op *Normal*
   zet.
@@ -74,14 +74,15 @@ scherm uit de HA-bediening, en een scherm wisselen forceert een **directe hertek
 
 ### Home Assistant-bediening
 
-Kies die direct onder de **Meerdere schermen gebruiken**-schakelaar in Profiel-instellingen
-(**Schermbediening in HA**, alleen zichtbaar als meerdere schermen aan staat):
+Eén **HA-bediening (scherm & override)**-dropdown in Profiel-instellingen bepaalt de stijl
+voor **zowel** de scherm-keuze (bij meerdere schermen) *als* de Away/Holiday **Display
+Override**. Zichtbaar zodra meerdere schermen, Afwezig of Vakantie aan staat:
 
 | Optie | Wat het genereert |
 |-------|-------------------|
-| **Geen** | Geen HA-bediening — de schermselect blijft `internal: true`, zodat het display blijft werken terwijl je hem vanuit je eigen automations aanstuurt. |
-| **Alleen dropdown** | Een template `select`; de opties zijn je schermnamen. |
-| **Alleen knoppen** | Eén template `button` per scherm (handig op een dashboard). |
+| **Geen** | Geen HA-bediening — de selects blijven `internal: true`, zodat het display blijft werken terwijl je ze vanuit je eigen automations aanstuurt. |
+| **Alleen dropdown** | Een template `select` — schermnamen voor de keuze, *Normal / Away / Holiday* voor de override. |
+| **Alleen knoppen** | Eén template `button` per optie (handig op een dashboard). |
 | **Dropdown & knoppen** | De dropdown *én* de buttons. |
 
 ### Display-mode-switches (Automatisch verversen / Statisch / Rotatie)
@@ -101,7 +102,8 @@ is dus altijd een gedefinieerde modus. Automatisch verversen en Statisch horen b
 **Refresh-logica**; Scherm rotatie komt automatisch bij ≥2 schermen. De HA-mode-switches
 hebben `entity_category: config`, dus ze staan in HA onder **Configuratie**.
 
-> Schermbediening en rotatie zijn grijs tenzij *Meerdere schermen gebruiken* aan staat.
+> De scherm-wissel-onderdelen (rotatie, knop per scherm) vereisen *Meerdere schermen
+> gebruiken*; de HA-bediening-dropdown verschijnt ook voor alleen Afwezig/Vakantie.
 > Ontwerpen met één scherm genereren exact dezelfde YAML als voorheen, je bestaande
 > lay-out migreert automatisch naar het eerste scherm, en de base64-herstelcode
 > round-trip't alle schermen.

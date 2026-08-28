@@ -17,14 +17,15 @@ profielkiezer; **+** voegt er een toe en **⚙** opent de instellingen.
   (rotatie-bewust).
 - **Rotatie**, **breedte/hoogte**, **canvas-achtergrond** (alleen preview). Nieuwe
   profielen starten met een **20 px-raster**.
-- **Wachtscherm gebruiken** aan/uit en **Meerdere schermen gebruiken** aan/uit — zie
-  [Schermen](Screens-NL). Met meerdere schermen aan verschijnt er direct eronder een
-  **Schermbediening in HA**-dropdown (geen / alleen dropdown / alleen knoppen / beide).
+- **Wachtscherm gebruiken** / **Meerdere schermen gebruiken** aan/uit — zie
+  [Schermen](Screens-NL).
 - **Afwezig-scherm gebruiken** / **Vakantie-scherm gebruiken** aan/uit — statische
   override-schermen die het scherm bevriezen zolang ze actief zijn (Home Assistant
-  **Display Override** select + knoppen, Vakantie wint, overleeft een herstart). Een
-  **Away/Holiday-bediening in HA**-dropdown verschijnt zodra één ervan aan staat. Zie
+  **Display Override** select + knoppen, Vakantie wint, overleeft een herstart). Zie
   [Schermen](Screens-NL).
+- **HA-bediening (scherm & override)** — één dropdown (geen / alleen dropdown / alleen
+  knoppen / beide) voor de stijl van *zowel* de scherm-keuze als de Away/Holiday-override.
+  Zichtbaar zodra meerdere schermen, Afwezig of Vakantie aan staat.
 
 ### Negatief-modus
 
