@@ -33,28 +33,31 @@ selector above the canvas.
   screen / Use Holiday screen**. They sit in the selector right after **Waiting** and
   before Screen 1. Empty screens fall back to a centred **"AWAY"** / **"HOLIDAY"** label
   (font `font_small`).
-- They generate a Home Assistant **Display Override** `select` (options *Normal / Away /
-  Holiday*) plus optional per-option buttons — style set by the shared **HA controls
+- There's no separate "Display Override" entity — Away and Holiday are just extra
+  options **appended to the one Home Assistant `Screen` select** alongside your designed
+  screens, plus optional per-option buttons — style set by the shared **HA controls
   (screen & override)** dropdown (none / dropdown only / buttons only / both).
-- While the override is on *Away* or *Holiday* the panel **freezes on that screen**: the
-  interval refresh **and** Screen Rotation are skipped until you set it back to *Normal*.
+- Picking Away or Holiday **freezes the panel on that screen**: the interval refresh
+  **and** Screen Rotation are skipped until you pick a designed screen again. Picking one
+  also forces **Static Display** on; turning **Auto Refresh** back on snaps the selector
+  back to the main screen — the two can never be active together.
 - If both would apply, **Holiday wins** (checked first in the lambda). The boot
   *waiting-for-data* branch still runs first.
-- Unlike `screen_select`, `display_override` has `restore_value: yes` — a running
-  Away/Holiday state survives a reboot. It stays crash-safe because the `on_value`
-  redraw is gated on `initial_data_received`.
+- `screen_select` has `restore_value: yes` — a running Away/Holiday state survives a
+  reboot. It stays crash-safe because the `on_value` redraw is gated on
+  `initial_data_received`.
 
   ```cpp
   if (id(initial_data_received) == false) {
     // Waiting screen
   } else {
-    int ov = id(display_override).active_index().value_or(0);
-    if (ov == 2) {        // Holiday
+    int cs = id(screen_select).active_index().value_or(0);
+    if (cs == 2) {        // Holiday
       // Holiday screen
-    } else if (ov == 1) { // Away
+    } else if (cs == 1) { // Away
       // Away screen
     } else {
-      // Normal: designed screen(s)
+      // designed screen(s)
     }
   }
   ```

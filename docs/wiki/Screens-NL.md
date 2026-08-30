@@ -33,29 +33,31 @@ kiezer boven het canvas.
   **Profiel-instellingen → Afwezig-scherm gebruiken / Vakantie-scherm gebruiken**. Ze
   staan in de kiezer direct na **Wachten** en vóór Scherm 1. Een leeg scherm valt terug
   op een gecentreerde **"AFWEZIG"** / **"VAKANTIE"**-tekst (font `font_small`).
-- Ze genereren een Home Assistant **Display Override** `select` (opties *Normal / Away /
-  Holiday*) plus optionele knoppen per optie — stijl via de gedeelde dropdown
-  **HA-bediening (scherm & override)** (geen / alleen dropdown / alleen knoppen / beide).
-- Zolang de override op *Away* of *Holiday* staat **bevriest het scherm**: de
-  interval-verversing **én** Scherm rotatie worden overgeslagen tot je terug op *Normal*
-  zet.
+- Geen aparte "Display Override"-entity — Away en Holiday zijn gewoon extra opties
+  **toegevoegd aan dezelfde Home Assistant `Screen`-select** naast je ontworpen schermen,
+  plus optionele knoppen per optie — stijl via de gedeelde dropdown **HA-bediening
+  (scherm & override)** (geen / alleen dropdown / alleen knoppen / beide).
+- Away of Holiday kiezen **bevriest het scherm**: de interval-verversing **én** Scherm
+  rotatie worden overgeslagen tot je weer een ontworpen scherm kiest. Kiezen zet ook
+  **Statisch Display** aan; **Automatisch verversen** weer aanzetten zet de kiezer terug
+  op het hoofdscherm — die twee kunnen nooit tegelijk actief zijn.
 - Bij beide van toepassing wint **Vakantie** (eerst gecheckt in de lambda). De
   boot-*wachten-op-data*-tak draait nog steeds eerst.
-- Anders dan `screen_select` heeft `display_override` `restore_value: yes` — een lopende
-  Away/Holiday-status overleeft een herstart. Dat blijft crash-veilig omdat de
-  `on_value`-hertekening op `initial_data_received` gate't.
+- `screen_select` heeft `restore_value: yes` — een lopende Away/Holiday-status overleeft
+  een herstart. Dat blijft crash-veilig omdat de `on_value`-hertekening op
+  `initial_data_received` gate't.
 
   ```cpp
   if (id(initial_data_received) == false) {
     // Wachtscherm
   } else {
-    int ov = id(display_override).active_index().value_or(0);
-    if (ov == 2) {        // Holiday
+    int cs = id(screen_select).active_index().value_or(0);
+    if (cs == 2) {        // Holiday
       // Vakantie-scherm
-    } else if (ov == 1) { // Away
+    } else if (cs == 1) { // Away
       // Afwezig-scherm
     } else {
-      // Normal: ontworpen scherm(en)
+      // ontworpen scherm(en)
     }
   }
   ```

@@ -17,12 +17,12 @@ A **profile** is one display design. Keep several side by side with the profile 
 - **Rotation**, **width/height**, **canvas background** (preview only). New profiles
   default to a **20 px grid**.
 - **Use waiting screen** / **Use multiple screens** on/off — see [Screens](Screens-EN).
-- **Use Away screen** / **Use Holiday screen** on/off — static override screens that
-  freeze the panel while active (Home Assistant **Display Override** select + buttons,
-  Holiday wins, survives a reboot). See [Screens](Screens-EN).
+- **Use Away screen** / **Use Holiday screen** on/off — static override screens, added as
+  extra options on the same `Screen` select + buttons (no separate entity), freeze the
+  panel while active, Holiday wins, survives a reboot. See [Screens](Screens-EN).
 - **HA controls (screen & override)** — one dropdown (none / dropdown only / buttons only
-  / both) for the style of *both* the screen picker and the Away/Holiday override. Shown
-  when multiple screens, Away, or Holiday is on.
+  / both) for the style of the one `Screen` selector, screens and Away/Holiday options
+  alike. Shown when multiple screens, Away, or Holiday is on.
 
 ### Negative mode
 
