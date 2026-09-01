@@ -19,13 +19,15 @@ profielkiezer; **+** voegt er een toe en **⚙** opent de instellingen.
   profielen starten met een **20 px-raster**.
 - **Wachtscherm gebruiken** / **Meerdere schermen gebruiken** aan/uit — zie
   [Schermen](Screens-NL).
-- **Afwezig-scherm gebruiken** / **Vakantie-scherm gebruiken** aan/uit — statische
-  override-schermen, toegevoegd als extra opties op dezelfde `Screen`-select + knoppen
-  (geen aparte entity), bevriezen het scherm zolang ze actief zijn, Vakantie wint,
-  overleeft een herstart. Zie [Schermen](Screens-NL).
+- **Afwezig-scherm gebruiken** / **Vakantie-scherm gebruiken** / **Slaapscherm
+  gebruiken** aan/uit — statische override-schermen, toegevoegd als extra opties op
+  dezelfde `Screen`-select + knoppen (geen aparte entity), bevriezen het scherm zolang ze
+  actief zijn (prioriteit Vakantie > Afwezig > Slapen), overleven een herstart. Zie
+  [Schermen](Screens-NL).
 - **HA-bediening (scherm & override)** — één dropdown (geen / alleen dropdown / alleen
-  knoppen / beide) voor de stijl van de ene `Screen`-kiezer, schermen én Away/Holiday-
-  opties samen. Zichtbaar zodra meerdere schermen, Afwezig of Vakantie aan staat.
+  knoppen / beide) voor de stijl van de ene `Screen`-kiezer, schermen én Away/Holiday/
+  Sleep-opties samen. Zichtbaar zodra meerdere schermen, Afwezig, Vakantie of Slapen aan
+  staat.
 
 ### Negatief-modus
 

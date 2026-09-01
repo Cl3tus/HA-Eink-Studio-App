@@ -17,12 +17,13 @@ A **profile** is one display design. Keep several side by side with the profile 
 - **Rotation**, **width/height**, **canvas background** (preview only). New profiles
   default to a **20 px grid**.
 - **Use waiting screen** / **Use multiple screens** on/off — see [Screens](Screens-EN).
-- **Use Away screen** / **Use Holiday screen** on/off — static override screens, added as
-  extra options on the same `Screen` select + buttons (no separate entity), freeze the
-  panel while active, Holiday wins, survives a reboot. See [Screens](Screens-EN).
+- **Use Away screen** / **Use Holiday screen** / **Use Sleep screen** on/off — static
+  override screens, added as extra options on the same `Screen` select + buttons (no
+  separate entity), freeze the panel while active (priority Holiday > Away > Sleep),
+  survive a reboot. See [Screens](Screens-EN).
 - **HA controls (screen & override)** — one dropdown (none / dropdown only / buttons only
-  / both) for the style of the one `Screen` selector, screens and Away/Holiday options
-  alike. Shown when multiple screens, Away, or Holiday is on.
+  / both) for the style of the one `Screen` selector, screens and Away/Holiday/Sleep
+  options alike. Shown when multiple screens, Away, Holiday, or Sleep is on.
 
 ### Negative mode
 

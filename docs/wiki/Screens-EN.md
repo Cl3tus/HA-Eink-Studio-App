@@ -27,25 +27,24 @@ selector above the canvas.
   }
   ```
 
-### Away & Holiday override screens
+### Away, Holiday & Sleep override screens
 
-- Two optional **static** screens, enabled per profile in **Profile settings → Use Away
-  screen / Use Holiday screen**. They sit in the selector right after **Waiting** and
-  before Screen 1. Empty screens fall back to a centred **"AWAY"** / **"HOLIDAY"** label
-  (font `font_small`).
-- There's no separate "Display Override" entity — Away and Holiday are just extra
+- Three optional **static** screens, enabled per profile in **Profile settings → Use Away
+  screen / Use Holiday screen / Use Sleep screen**. They sit in the selector right after
+  **Waiting** and before Screen 1. Empty screens fall back to a centred **"AWAY"** /
+  **"HOLIDAY"** / **"SLEEP"** label (font `font_small`).
+- There's no separate "Display Override" entity — Away, Holiday and Sleep are just extra
   options **appended to the one Home Assistant `Screen` select** alongside your designed
   screens, plus optional per-option buttons — style set by the shared **HA controls
   (screen & override)** dropdown (none / dropdown only / buttons only / both).
-- Picking Away or Holiday **freezes the panel on that screen**: the interval refresh
-  **and** Screen Rotation are skipped until you pick a designed screen again. Picking one
-  also forces **Static Display** on; turning **Auto Refresh** back on snaps the selector
-  back to the main screen — the two can never be active together.
-- If both would apply, **Holiday wins** (checked first in the lambda). The boot
-  *waiting-for-data* branch still runs first.
-- `screen_select` has `restore_value: yes` — a running Away/Holiday state survives a
-  reboot. It stays crash-safe because the `on_value` redraw is gated on
-  `initial_data_received`.
+- Picking one **freezes the panel on that screen**: the interval refresh **and** Screen
+  Rotation are skipped until you pick a designed screen again. Picking one also forces
+  **Static Display** on; turning **Auto Refresh** back on snaps the selector back to the
+  main screen — the two can never be active together.
+- If more than one would apply, priority is **Holiday > Away > Sleep** (checked in that
+  order in the lambda). The boot *waiting-for-data* branch still runs first.
+- `screen_select` has `restore_value: yes` — a running override state survives a reboot.
+  It stays crash-safe because the `on_value` redraw is gated on `initial_data_received`.
 
   ```cpp
   if (id(initial_data_received) == false) {
@@ -56,6 +55,8 @@ selector above the canvas.
       // Holiday screen
     } else if (cs == 1) { // Away
       // Away screen
+    } else if (cs == 3) { // Sleep
+      // Sleep screen
     } else {
       // designed screen(s)
     }
